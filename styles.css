@@ -34,7 +34,7 @@ body {
   background: var(--bg);
   min-height: 100vh;
   overflow-x: hidden;
-  background-image: url("/assets/bg-poster.jpg");
+  background-image: url("assets/bg-poster.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -91,6 +91,11 @@ main {
 
 .section {
   padding: 84px 0;
+}
+
+.section-header-inner {
+  padding: 20px 24px;
+  margin-bottom: 18px;
 }
 
 .section .section-title {
@@ -331,6 +336,12 @@ nav.top-nav {
 
 .spotlight-card {
   padding: 22px 24px;
+}
+
+.spotlight-card ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
 }
 
 .tier-grid {
