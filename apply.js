@@ -6,11 +6,11 @@
   const mobileDock = document.getElementById("mobile-dock");
 
   const navAssets = {
-    how: "/assets/nav-how.svg",
-    features: "/assets/nav-features.svg",
-    tiers: "/assets/nav-tiers.svg",
-    faq: "/assets/nav-faq.svg",
-    apply: "/assets/nav-apply.svg",
+    how: "assets/nav-how.svg",
+    features: "assets/nav-features.svg",
+    tiers: "assets/nav-tiers.svg",
+    faq: "assets/nav-faq.svg",
+    apply: "assets/nav-apply.svg",
   };
 
   const buildImageLink = (href, src, label, className = "img-link") => {
@@ -26,7 +26,7 @@
   };
 
   content.nav.forEach((item) => {
-    const href = item.href.startsWith("#") ? `/index.html${item.href}` : item.href;
+    const href = item.href.startsWith("#") ? `index.html${item.href}` : item.href;
     const link = buildImageLink(href, navAssets[item.id], item.label);
     if (item.id === "apply") link.classList.add("apply-link");
     navLinks.appendChild(link);
