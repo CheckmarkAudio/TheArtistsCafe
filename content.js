@@ -32,6 +32,8 @@ window.SiteContent = {
     "6-week playlisting push",
     "Keep 100% royalties",
   ],
+  proofStripTitle: "Proof at a glance",
+  proofStripSentence: "Fast credibility points you can scan in seconds.",
   howItWorks: {
     headline: "How it works",
     sentence: "Fast verification, clear options, immediate momentum.",
