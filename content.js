@@ -16,7 +16,7 @@ window.SiteContent = {
     { id: "features", label: "Features", href: "#features" },
     { id: "tiers", label: "Tiers", href: "#tiers" },
     { id: "faq", label: "FAQ", href: "#faq" },
-    { id: "apply", label: "Apply", href: "/apply.html" },
+    { id: "apply", label: "Apply", href: "apply.html" },
   ],
   hero: {
     headline:
@@ -24,7 +24,7 @@ window.SiteContent = {
     subhead:
       "Target audiences all over the world with official profiles, playlist submissions, and scan-to-play campaigns.",
     ctas: [
-      { label: "Apply", href: "/apply.html" },
+      { label: "Apply", href: "apply.html" },
       { label: "View Tiers", href: "#tiers" },
     ],
   },
