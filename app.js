@@ -39,6 +39,8 @@
     heroCtas.appendChild(buildImageLink(cta.href, src, cta.label));
   });
 
+  document.getElementById("proof-title").textContent = content.proofStripTitle;
+  document.getElementById("proof-subtitle").textContent = content.proofStripSentence;
   const proofStrip = document.getElementById("proof-strip");
   content.proofStrip.forEach((item) => {
     const outer = document.createElement("div");
