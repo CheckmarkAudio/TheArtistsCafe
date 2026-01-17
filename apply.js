@@ -28,9 +28,23 @@
   content.nav.forEach((item) => {
     const href = item.href.startsWith("#") ? `/index.html${item.href}` : item.href;
     const link = buildImageLink(href, navAssets[item.id], item.label);
+    if (item.id === "apply") link.classList.add("apply-link");
     navLinks.appendChild(link);
-    mobileDock.appendChild(buildImageLink(href, navAssets[item.id], item.label));
+    const dockLink = buildImageLink(href, navAssets[item.id], item.label);
+    if (item.id === "apply") dockLink.classList.add("apply-link");
+    mobileDock.appendChild(dockLink);
   });
+
+  const brandLink = document.querySelector("nav.top-nav a.img-link");
+  const brandImg = document.querySelector(".brand-mark");
+  if (brandLink) brandLink.setAttribute("aria-label", content.accessibility.homeLabel);
+  if (brandImg) brandImg.alt = content.brand.name;
+  const fixedApply = document.querySelector(".fixed-apply");
+  if (fixedApply) {
+    fixedApply.setAttribute("aria-label", content.accessibility.applyNowLabel);
+    const img = fixedApply.querySelector("img");
+    if (img) img.alt = content.finalCta.applyLabel;
+  }
 
   document.getElementById("apply-headline").textContent = content.apply.headline;
   document.getElementById("apply-subhead").textContent = content.apply.sentence;
@@ -461,6 +475,7 @@
     const status = document.createElement("div");
     status.className = "status-text";
     status.id = "status-text";
+    status.setAttribute("aria-live", "polite");
 
     if (state.submitted) {
       status.classList.add("success-text");
