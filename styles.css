@@ -395,6 +395,7 @@ nav.top-nav {
   display: grid;
   gap: 16px;
   align-items: center;
+  padding: 24px;
 }
 
 .final-cta .cta-row img {
