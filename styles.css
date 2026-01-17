@@ -206,6 +206,10 @@ nav.top-nav {
   height: 40px;
 }
 
+.apply-link img {
+  box-shadow: 0 0 22px rgba(122, 107, 255, 0.45);
+}
+
 .brand-mark {
   height: 44px;
 }
@@ -238,6 +242,10 @@ nav.top-nav {
 
 .mobile-dock a img {
   height: 40px;
+}
+
+.mobile-dock .apply-link img {
+  height: 46px;
 }
 
 .hero {
