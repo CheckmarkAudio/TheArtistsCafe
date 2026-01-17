@@ -31,6 +31,13 @@
     mobileDock.appendChild(buildImageLink(item.href, navAssets[item.id], item.label));
   });
 
+  const brandLink = document.querySelector("nav.top-nav a.img-link");
+  const brandImg = document.querySelector(".brand-mark");
+  if (brandLink) brandLink.setAttribute("aria-label", content.accessibility.homeLabel);
+  if (brandImg) brandImg.alt = content.brand.name;
+  const fixedApply = document.querySelector(".fixed-apply");
+  if (fixedApply) {\n    fixedApply.setAttribute(\"aria-label\", content.accessibility.applyNowLabel);\n    const img = fixedApply.querySelector(\"img\");\n    if (img) img.alt = content.finalCta.applyLabel;\n  }
+
   document.getElementById("hero-headline").textContent = content.hero.headline;
   document.getElementById("hero-subhead").textContent = content.hero.subhead;
   const heroCtas = document.getElementById("hero-ctas");
