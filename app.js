@@ -222,6 +222,10 @@
   );
 
   const revealElements = Array.from(document.querySelectorAll(".reveal"));
+  revealElements.forEach((el, index) => {
+    const delay = (index % 6) * 80;
+    el.style.transitionDelay = `${delay}ms`;
+  });
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
