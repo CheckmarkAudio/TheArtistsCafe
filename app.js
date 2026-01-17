@@ -6,11 +6,11 @@
   const mobileDock = document.getElementById("mobile-dock");
 
   const navAssets = {
-    how: "/assets/nav-how.svg",
-    features: "/assets/nav-features.svg",
-    tiers: "/assets/nav-tiers.svg",
-    faq: "/assets/nav-faq.svg",
-    apply: "/assets/nav-apply.svg",
+    how: "assets/nav-how.svg",
+    features: "assets/nav-features.svg",
+    tiers: "assets/nav-tiers.svg",
+    faq: "assets/nav-faq.svg",
+    apply: "assets/nav-apply.svg",
   };
 
   const buildImageLink = (href, src, label, className = "img-link") => {
@@ -49,7 +49,7 @@
   document.getElementById("hero-subhead").textContent = content.hero.subhead;
   const heroCtas = document.getElementById("hero-ctas");
   content.hero.ctas.forEach((cta) => {
-    const src = cta.label === "Apply" ? "/assets/cta-apply.svg" : "/assets/cta-tiers.svg";
+    const src = cta.label === "Apply" ? "assets/cta-apply.svg" : "assets/cta-tiers.svg";
     heroCtas.appendChild(buildImageLink(cta.href, src, cta.label));
   });
 
@@ -157,7 +157,7 @@
     const card = document.createElement("div");
     card.className = "plane-inner glass-plane tier-card reveal";
     const tierImg = document.createElement("img");
-    tierImg.src = `/assets/tier-${tier.id}.svg`;
+    tierImg.src = `assets/tier-${tier.id}.svg`;
     tierImg.alt = `${tier.name} tier`;
     const title = document.createElement("h3");
     title.textContent = tier.name;
@@ -171,8 +171,8 @@
       list.appendChild(li);
     });
     const applyLink = buildImageLink(
-      `/apply.html?tier=${tier.id}`,
-      "/assets/cta-apply.svg",
+      `apply.html?tier=${tier.id}`,
+      "assets/cta-apply.svg",
       `Apply for ${tier.name}`
     );
     card.appendChild(tierImg);
@@ -211,12 +211,12 @@
   document.getElementById("final-subtitle").textContent = content.finalCta.sentence;
   const finalCtas = document.getElementById("final-ctas");
   finalCtas.appendChild(
-    buildImageLink("/apply.html", "/assets/cta-apply.svg", content.finalCta.applyLabel)
+    buildImageLink("apply.html", "assets/cta-apply.svg", content.finalCta.applyLabel)
   );
   finalCtas.appendChild(
     buildImageLink(
       `mailto:${content.brand.email}`,
-      "/assets/cta-email.svg",
+      "assets/cta-email.svg",
       content.finalCta.emailLabel
     )
   );
