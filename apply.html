@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply — The Artists Cafe</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <video
+      class="bg-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="/assets/bg-poster.jpg"
+      aria-hidden="true"
+    >
+      <source src="/assets/bg.webm" type="video/webm" />
+      <source src="/assets/bg.mp4" type="video/mp4" />
+    </video>
+    <div class="bg-veil" aria-hidden="true"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <a class="img-link fixed-apply" href="#apply" aria-label="Apply now">
+      <img src="/assets/cta-apply.svg" alt="Apply" />
+    </a>
+
+    <nav class="top-nav">
+      <div class="container nav-inner">
+        <a class="img-link" href="/index.html" aria-label="Home">
+          <img class="brand-mark" src="/assets/brand.svg" alt="The Artists Cafe" />
+        </a>
+        <div class="nav-links" id="nav-links"></div>
+      </div>
+    </nav>
+
+    <div class="mobile-dock" id="mobile-dock"></div>
+
+    <main id="apply" class="site-shell">
+      <section class="apply-hero">
+        <div class="container">
+          <div class="float-plane" data-parallax>
+            <div class="plane-inner glass-plane hero-content reveal">
+              <h1 id="apply-headline"></h1>
+              <p id="apply-subhead"></p>
+              <p class="footer-note" id="apply-note"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="wizard">
+            <div class="wizard-steps" id="wizard-steps"></div>
+            <form class="float-plane" data-parallax id="apply-form" novalidate>
+              <div class="plane-inner glass-plane form-plane reveal" id="form-plane"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/content.js"></script>
+    <script src="/mail.js"></script>
+    <script src="/apply.js"></script>
+  </body>
+</html>
