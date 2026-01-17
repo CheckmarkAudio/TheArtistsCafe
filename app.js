@@ -27,8 +27,11 @@
 
   content.nav.forEach((item) => {
     const link = buildImageLink(item.href, navAssets[item.id], item.label);
+    if (item.id === "apply") link.classList.add("apply-link");
     navLinks.appendChild(link);
-    mobileDock.appendChild(buildImageLink(item.href, navAssets[item.id], item.label));
+    const dockLink = buildImageLink(item.href, navAssets[item.id], item.label);
+    if (item.id === "apply") dockLink.classList.add("apply-link");
+    mobileDock.appendChild(dockLink);
   });
 
   const brandLink = document.querySelector("nav.top-nav a.img-link");
@@ -36,7 +39,11 @@
   if (brandLink) brandLink.setAttribute("aria-label", content.accessibility.homeLabel);
   if (brandImg) brandImg.alt = content.brand.name;
   const fixedApply = document.querySelector(".fixed-apply");
-  if (fixedApply) {\n    fixedApply.setAttribute(\"aria-label\", content.accessibility.applyNowLabel);\n    const img = fixedApply.querySelector(\"img\");\n    if (img) img.alt = content.finalCta.applyLabel;\n  }
+  if (fixedApply) {
+    fixedApply.setAttribute("aria-label", content.accessibility.applyNowLabel);
+    const img = fixedApply.querySelector("img");
+    if (img) img.alt = content.finalCta.applyLabel;
+  }
 
   document.getElementById("hero-headline").textContent = content.hero.headline;
   document.getElementById("hero-subhead").textContent = content.hero.subhead;
