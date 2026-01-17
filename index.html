@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Artists Cafe</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <video
+      class="bg-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="/assets/bg-poster.jpg"
+      aria-hidden="true"
+    >
+      <source src="/assets/bg.webm" type="video/webm" />
+      <source src="/assets/bg.mp4" type="video/mp4" />
+    </video>
+    <div class="bg-veil" aria-hidden="true"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <a class="img-link fixed-apply" href="/apply.html" aria-label="Apply now">
+      <img src="/assets/cta-apply.svg" alt="Apply" />
+    </a>
+
+    <nav class="top-nav">
+      <div class="container nav-inner">
+        <a class="img-link" href="#top" aria-label="Home">
+          <img class="brand-mark" src="/assets/brand.svg" alt="The Artists Cafe" />
+        </a>
+        <div class="nav-links" id="nav-links"></div>
+      </div>
+    </nav>
+
+    <div class="mobile-dock" id="mobile-dock"></div>
+
+    <main id="top" class="site-shell">
+      <section class="hero section">
+        <div class="container">
+          <div class="float-plane" data-parallax>
+            <div class="plane-inner glass-plane hero-content reveal">
+              <h1 id="hero-headline"></h1>
+              <p id="hero-subhead"></p>
+              <div class="cta-row" id="hero-ctas"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="proof-strip" id="proof-strip"></div>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="container">
+          <h2 class="section-title" id="how-title"></h2>
+          <p class="section-subtitle" id="how-subtitle"></p>
+          <div class="steps-grid" id="how-steps"></div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="container">
+          <h2 class="section-title" id="features-title"></h2>
+          <p class="section-subtitle" id="features-subtitle"></p>
+          <div class="feature-grid" id="feature-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="spotlight" id="immersive-spotlight"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="spotlight" id="playlisting-spotlight"></div>
+        </div>
+      </section>
+
+      <section class="section" id="tiers">
+        <div class="container">
+          <h2 class="section-title" id="tiers-title"></h2>
+          <p class="section-subtitle" id="tiers-subtitle"></p>
+          <div class="tier-grid" id="tier-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="float-plane" data-parallax>
+            <div class="plane-inner glass-plane spotlight-card reveal">
+              <h3 id="movement-title"></h3>
+              <p id="movement-line"></p>
+              <p class="footer-note" id="movement-quote"></p>
+              <p class="footer-note" id="movement-coowner"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <h2 class="section-title" id="faq-title"></h2>
+          <div class="faq-grid" id="faq-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="float-plane" data-parallax>
+            <div class="plane-inner glass-plane final-cta reveal">
+              <h2 id="final-title"></h2>
+              <p class="section-subtitle" id="final-subtitle"></p>
+              <div class="cta-row" id="final-ctas"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/content.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
