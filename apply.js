@@ -105,7 +105,7 @@
     input.addEventListener("input", () => {
       state.values[id] = input.value.trim();
       state.errors[id] = "";
-      renderStep();
+      error.textContent = "";
     });
     const error = document.createElement("div");
     error.className = "error-text";
@@ -140,7 +140,7 @@
     select.addEventListener("change", () => {
       state.values[id] = select.value;
       state.errors[id] = "";
-      renderStep();
+      error.textContent = "";
     });
     const error = document.createElement("div");
     error.className = "error-text";
@@ -165,7 +165,7 @@
     textarea.addEventListener("input", () => {
       state.values[id] = textarea.value.trim();
       state.errors[id] = "";
-      renderStep();
+      error.textContent = "";
     });
     const error = document.createElement("div");
     error.className = "error-text";
@@ -176,7 +176,7 @@
     return wrapper;
   };
 
-  const createCheckbox = ({ id, label, checked = false }) => {
+  const createCheckbox = ({ id, label, checked = false, reRender = false }) => {
     const wrapper = document.createElement("div");
     wrapper.className = "field";
     const group = document.createElement("div");
@@ -189,7 +189,8 @@
     input.addEventListener("change", () => {
       state.values[id] = input.checked;
       state.errors[id] = "";
-      renderStep();
+      error.textContent = "";
+      if (reRender) renderStep();
     });
     const span = document.createElement("span");
     span.textContent = label;
@@ -253,7 +254,7 @@
       input.addEventListener("change", () => {
         state.values[id] = option;
         state.errors[id] = "";
-        renderStep();
+        error.textContent = "";
       });
       const span = document.createElement("span");
       span.textContent = option;
@@ -396,6 +397,7 @@
           id: step.spotifyNotLive.id,
           label: step.spotifyNotLive.label,
           checked: state.values.spotifyNotLive,
+          reRender: true,
         })
       );
       formPlane.appendChild(
@@ -568,6 +570,10 @@
   renderStep();
 
   const revealElements = Array.from(document.querySelectorAll(".reveal"));
+  revealElements.forEach((el, index) => {
+    const delay = (index % 6) * 80;
+    el.style.transitionDelay = `${delay}ms`;
+  });
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
