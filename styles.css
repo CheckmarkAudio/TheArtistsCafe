@@ -452,6 +452,30 @@ select:focus {
   outline-offset: 2px;
 }
 
+button {
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(18, 18, 28, 0.7);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease), box-shadow var(--dur-med) var(--ease);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(122, 107, 255, 0.25);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .inline-options {
   display: flex;
   gap: 10px;
@@ -522,6 +546,10 @@ select:focus {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .bg-video {
+    display: none;
   }
 
   .plane-inner,
