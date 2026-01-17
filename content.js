@@ -7,6 +7,10 @@ window.SiteContent = {
       "Co-owned and managed by Hip-Hop Lxrd Melchior, Chairman/Co-Founder of HallPass International.",
     quote: "\"Artists deserve global reach without giving up their royalties.\" — Lxrd Melchior",
   },
+  accessibility: {
+    homeLabel: "Home",
+    applyNowLabel: "Apply now",
+  },
   nav: [
     { id: "how", label: "How It Works", href: "#how" },
     { id: "features", label: "Features", href: "#features" },
