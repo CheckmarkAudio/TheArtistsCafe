@@ -272,6 +272,11 @@ nav.top-nav {
   margin: 0 0 18px;
 }
 
+.hero-logo-shell {
+  display: flex;
+  justify-content: center;
+}
+
 .hero-logo {
   width: min(320px, 70vw);
 }
