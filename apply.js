@@ -84,7 +84,7 @@
       pill.className = "glass-plane step-pill";
       pill.textContent = `${index + 1}. ${step.title}`;
       if (index === state.stepIndex) {
-        pill.style.borderColor = "rgba(122, 107, 255, 0.6)";
+        pill.style.borderColor = "rgba(92, 150, 176, 0.6)";
       }
       stepPills.appendChild(pill);
     });
@@ -649,7 +649,7 @@
 
     const draw = () => {
       ctx.clearRect(0, 0, stateCanvas.width, stateCanvas.height);
-      ctx.fillStyle = "rgba(122, 107, 255, 0.3)";
+      ctx.fillStyle = "rgba(92, 150, 176, 0.3)";
       particles.forEach((p) => {
         const dx = (stateCanvas.pointerX - p.x) * 0.0008;
         const dy = (stateCanvas.pointerY - p.y) * 0.0008;
