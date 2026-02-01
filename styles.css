@@ -98,8 +98,8 @@ main {
 }
 
 .section-header-inner {
-  padding: 20px 24px;
-  margin-bottom: 18px;
+  padding: 0;
+  margin-bottom: 24px;
 }
 
 .section .section-title {
@@ -124,6 +124,14 @@ main {
   backdrop-filter: blur(20px);
 }
 
+.open-plane {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  animation: none;
+}
+
 .float-plane {
   transition: transform var(--dur-med) var(--ease);
   transform: translate3d(var(--parallax-x, 0px), var(--parallax-y, 0px), 0);
@@ -141,9 +149,20 @@ main {
   border-color: rgba(120, 199, 220, 0.55);
 }
 
+.float-plane:hover .open-plane {
+  transform: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
 .float-plane:active .plane-inner {
   transform: translateY(2px) scale(0.98);
   box-shadow: 0 10px 24px rgba(72, 120, 140, 0.4);
+}
+
+.float-plane:active .open-plane {
+  transform: none;
+  box-shadow: none;
 }
 
 @keyframes float {
@@ -496,6 +515,12 @@ nav.top-nav .nav-pill.is-primary:hover {
   border-radius: 16px;
   box-shadow: var(--shadow);
   position: relative;
+}
+
+.open-plane.tier-card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .tier-card h3 {
