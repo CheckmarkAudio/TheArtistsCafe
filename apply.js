@@ -487,6 +487,7 @@
     if (state.stepIndex > 0) {
       const back = document.createElement("button");
       back.type = "button";
+      back.className = "button-ghost";
       back.textContent = content.apply.actions.back;
       back.addEventListener("click", () => {
         state.stepIndex -= 1;
@@ -497,6 +498,7 @@
 
     const next = document.createElement("button");
     next.type = "button";
+    next.className = "button-primary";
     next.textContent =
       state.stepIndex === content.apply.steps.length - 1
         ? state.sending
