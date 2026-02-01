@@ -266,23 +266,28 @@ nav.top-nav {
   padding: 40px;
 }
 
-.hero-logo-shell,
-.apply-logo-shell {
-  padding: 0 40px;
-  margin: 0 0 18px;
-}
-
-.hero-logo-shell {
-  display: flex;
-  justify-content: center;
-}
-
 .hero-logo {
   width: min(320px, 70vw);
 }
 
-.hero h1 {
+.hero-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
   margin: 0 0 20px;
+  flex-wrap: wrap;
+}
+
+.hero-header .hero-logo {
+  width: min(220px, 45vw);
+}
+
+.hero-header h1 {
+  margin: 0;
+  flex: 1 1 240px;
+}
+
+.hero h1 {
   font-size: clamp(36px, 5vw, 54px);
 }
 
@@ -427,6 +432,11 @@ nav.top-nav {
 
 .apply-hero {
   padding: 120px 0 40px;
+}
+
+.apply-logo-shell {
+  padding: 0 40px;
+  margin: 0 0 18px;
 }
 
 .apply-logo {
