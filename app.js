@@ -5,14 +5,6 @@
   const navLinks = document.getElementById("nav-links");
   const mobileDock = document.getElementById("mobile-dock");
 
-  const navAssets = {
-    how: "assets/nav-how.svg",
-    features: "assets/nav-features.svg",
-    tiers: "assets/nav-tiers.svg",
-    faq: "assets/nav-faq.svg",
-    apply: "assets/nav-apply.svg",
-  };
-
   const buildImageLink = (href, src, label, className = "img-link") => {
     const link = document.createElement("a");
     link.href = href;
@@ -35,11 +27,11 @@
   };
 
   content.nav.forEach((item) => {
-    const link = buildImageLink(item.href, navAssets[item.id], item.label);
-    if (item.id === "apply") link.classList.add("apply-link");
+    const link = buildTextLink(item.href, item.label, "nav-pill");
+    if (item.id === "apply") link.classList.add("is-primary");
     navLinks.appendChild(link);
-    const dockLink = buildImageLink(item.href, navAssets[item.id], item.label);
-    if (item.id === "apply") dockLink.classList.add("apply-link");
+    const dockLink = buildTextLink(item.href, item.label, "nav-pill");
+    if (item.id === "apply") dockLink.classList.add("is-primary");
     mobileDock.appendChild(dockLink);
   });
 
