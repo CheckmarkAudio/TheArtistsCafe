@@ -5,12 +5,16 @@
       <stop offset="100%" stop-color="#3b3568" stop-opacity="0.95" />
     </linearGradient>
     <linearGradient id="highlight" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18" />
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.16" />
       <stop offset="55%" stop-color="#ffffff" stop-opacity="0" />
     </linearGradient>
+    <clipPath id="pill-clip">
+      <rect x="3" y="3" width="174" height="52" rx="17" />
+    </clipPath>
   </defs>
-  <rect x="2" y="2" width="176" height="54" rx="18" fill="#141425" stroke="rgba(122,107,255,0.45)" stroke-width="1.5" />
-  <rect x="6" y="6" width="168" height="46" rx="14" fill="url(#grad)" opacity="0.6" />
-  <rect x="6" y="6" width="168" height="22" rx="11" fill="url(#highlight)" />
+  <rect x="3" y="3" width="174" height="52" rx="17" fill="#141425" />
+  <rect x="5" y="5" width="170" height="48" rx="15" fill="url(#grad)" opacity="0.65" />
+  <rect x="5" y="5" width="170" height="22" rx="11" fill="url(#highlight)" clip-path="url(#pill-clip)" />
+  <rect x="3" y="3" width="174" height="52" rx="17" fill="none" stroke="rgba(122,107,255,0.5)" stroke-width="1" />
   <text x="50%" y="50%" fill="#eef0ff" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="middle">Apply</text>
 </svg>
