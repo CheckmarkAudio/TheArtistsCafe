@@ -517,11 +517,6 @@ nav.top-nav .nav-pill.is-primary:hover {
   position: relative;
 }
 
-.open-plane.tier-card {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
 
 .tier-card h3 {
   margin: 0;
