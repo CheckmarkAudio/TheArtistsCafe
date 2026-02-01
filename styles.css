@@ -230,8 +230,9 @@ nav.top-nav {
   z-index: 12;
 }
 
-.fixed-apply img {
-  height: 54px;
+.fixed-apply.cta-button {
+  min-height: 46px;
+  padding: 8px 22px;
 }
 
 .mobile-dock {
