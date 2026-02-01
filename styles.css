@@ -5,8 +5,8 @@
   --plane: rgba(14, 14, 20, 0.7);
   --border: rgba(255, 255, 255, 0.12);
   --glow: rgba(92, 150, 176, 0.35);
-  --text: #5c96b0;
-  --muted: #5c96b0;
+  --text: #ffffff;
+  --muted: #ffffff;
   --accent: #5c96b0;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --dur-fast: 160ms;
@@ -133,12 +133,12 @@ main {
 .float-plane:hover .plane-inner {
   transform: translateY(-4px) scale(1.01);
   box-shadow: var(--shadow-hover);
-  border-color: rgba(122, 107, 255, 0.5);
+  border-color: rgba(92, 150, 176, 0.5);
 }
 
 .float-plane:active .plane-inner {
   transform: translateY(2px) scale(0.98);
-  box-shadow: 0 10px 24px rgba(60, 50, 140, 0.4);
+  box-shadow: 0 10px 24px rgba(72, 120, 140, 0.4);
 }
 
 @keyframes float {
@@ -173,7 +173,7 @@ main {
 .img-link:hover img,
 .img-link:hover svg {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(122, 107, 255, 0.35);
+  box-shadow: 0 8px 20px rgba(92, 150, 176, 0.35);
 }
 
 .img-link:active img,
@@ -213,7 +213,7 @@ nav.top-nav {
 }
 
 .apply-link img {
-  box-shadow: 0 0 22px rgba(122, 107, 255, 0.45);
+  box-shadow: 0 0 22px rgba(92, 150, 176, 0.45);
 }
 
 .brand-mark {
@@ -500,7 +500,7 @@ textarea {
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid rgba(122, 107, 255, 0.6);
+  outline: 2px solid rgba(92, 150, 176, 0.6);
   outline-offset: 2px;
 }
 
@@ -523,7 +523,7 @@ button {
 
 button:hover:not(:disabled) {
   transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(122, 107, 255, 0.25);
+  box-shadow: 0 8px 18px rgba(92, 150, 176, 0.25);
 }
 
 button:active:not(:disabled) {
@@ -543,13 +543,13 @@ button:disabled {
 }
 
 .button-primary {
-  background: linear-gradient(140deg, rgba(122, 107, 255, 0.95), rgba(78, 63, 212, 0.95));
-  border-color: rgba(122, 107, 255, 0.6);
-  box-shadow: 0 14px 26px rgba(92, 82, 200, 0.35);
+  background: linear-gradient(140deg, rgba(92, 150, 176, 0.95), rgba(70, 125, 150, 0.95));
+  border-color: rgba(92, 150, 176, 0.6);
+  box-shadow: 0 14px 26px rgba(72, 130, 150, 0.35);
 }
 
 .button-primary:hover:not(:disabled) {
-  box-shadow: 0 18px 30px rgba(110, 100, 230, 0.45);
+  box-shadow: 0 18px 30px rgba(92, 150, 176, 0.45);
 }
 
 .button-ghost {
