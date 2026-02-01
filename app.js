@@ -299,7 +299,7 @@
 
     const draw = () => {
       ctx.clearRect(0, 0, state.width, state.height);
-      ctx.fillStyle = "rgba(122, 107, 255, 0.35)";
+      ctx.fillStyle = "rgba(92, 150, 176, 0.35)";
       particles.forEach((p) => {
         const dx = (state.pointerX - p.x) * 0.0008;
         const dy = (state.pointerY - p.y) * 0.0008;
