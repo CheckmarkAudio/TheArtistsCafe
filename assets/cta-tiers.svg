@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="58" viewBox="0 0 200 58" role="img" aria-label="View Tiers">
   <defs>
     <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#7a6bff" stop-opacity="0.95" />
-      <stop offset="100%" stop-color="#3b3568" stop-opacity="0.95" />
+      <stop offset="0%" stop-color="#5c96b0" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#467d96" stop-opacity="0.95" />
     </linearGradient>
     <linearGradient id="highlight" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.16" />
@@ -15,6 +15,6 @@
   <rect x="3" y="3" width="194" height="52" rx="17" fill="#141425" />
   <rect x="5" y="5" width="190" height="48" rx="15" fill="url(#grad)" opacity="0.65" />
   <rect x="5" y="5" width="190" height="22" rx="11" fill="url(#highlight)" clip-path="url(#pill-clip)" />
-  <rect x="3" y="3" width="194" height="52" rx="17" fill="none" stroke="rgba(122,107,255,0.5)" stroke-width="1" />
-  <text x="50%" y="50%" fill="#eef0ff" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="middle">View Tiers</text>
+  <rect x="3" y="3" width="194" height="52" rx="17" fill="none" stroke="rgba(92,150,176,0.5)" stroke-width="1" />
+  <text x="50%" y="50%" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" text-anchor="middle" dominant-baseline="middle">View Tiers</text>
 </svg>
