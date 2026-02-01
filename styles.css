@@ -265,9 +265,14 @@ nav.top-nav {
   padding: 40px;
 }
 
+.hero-logo-shell,
+.apply-logo-shell {
+  padding: 0 40px;
+  margin: 0 0 18px;
+}
+
 .hero-logo {
   width: min(320px, 70vw);
-  margin: 0 0 24px;
 }
 
 .hero h1 {
@@ -419,7 +424,6 @@ nav.top-nav {
 
 .apply-logo {
   width: min(160px, 50vw);
-  margin: 0 0 18px;
 }
 
 .wizard {
