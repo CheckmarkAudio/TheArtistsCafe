@@ -63,7 +63,7 @@
     outer.className = "float-plane";
     outer.setAttribute("data-parallax", "");
     const card = document.createElement("div");
-    card.className = "plane-inner glass-plane proof-card reveal";
+    card.className = "plane-inner open-plane proof-card reveal";
     card.textContent = item;
     outer.appendChild(card);
     proofStrip.appendChild(outer);
@@ -77,7 +77,7 @@
     outer.className = "float-plane";
     outer.setAttribute("data-parallax", "");
     const card = document.createElement("div");
-    card.className = "plane-inner glass-plane step-card reveal";
+    card.className = "plane-inner open-plane step-card reveal";
     card.textContent = `${index + 1}. ${step}`;
     outer.appendChild(card);
     howSteps.appendChild(outer);
@@ -91,7 +91,7 @@
     outer.className = "float-plane";
     outer.setAttribute("data-parallax", "");
     const card = document.createElement("div");
-    card.className = "plane-inner glass-plane feature-card reveal";
+    card.className = "plane-inner open-plane feature-card reveal";
     const title = document.createElement("h3");
     title.textContent = feature.title;
     const list = document.createElement("ul");
@@ -111,7 +111,7 @@
   immersiveOuter.className = "float-plane";
   immersiveOuter.setAttribute("data-parallax", "");
   const immersiveCard = document.createElement("div");
-  immersiveCard.className = "plane-inner glass-plane spotlight-card reveal";
+  immersiveCard.className = "plane-inner open-plane spotlight-card reveal";
   immersiveCard.innerHTML = `
     <h3>${content.immersive.headline}</h3>
     <p>${content.immersive.sentence}</p>
@@ -132,7 +132,7 @@
   playlistOuter.className = "float-plane";
   playlistOuter.setAttribute("data-parallax", "");
   const playlistCard = document.createElement("div");
-  playlistCard.className = "plane-inner glass-plane spotlight-card reveal";
+  playlistCard.className = "plane-inner open-plane spotlight-card reveal";
   const playlistTitle = document.createElement("h3");
   playlistTitle.textContent = content.playlisting.headline;
   const playlistList = document.createElement("ul");
@@ -157,7 +157,7 @@
     outer.className = "float-plane";
     outer.setAttribute("data-parallax", "");
     const card = document.createElement("div");
-    card.className = "plane-inner glass-plane tier-card reveal";
+    card.className = "plane-inner open-plane tier-card reveal";
     if (tier.recommended) {
       card.classList.add("is-recommended");
       const badge = document.createElement("span");
