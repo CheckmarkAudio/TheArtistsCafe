@@ -157,7 +157,7 @@
     outer.className = "float-plane";
     outer.setAttribute("data-parallax", "");
     const card = document.createElement("div");
-    card.className = "plane-inner open-plane tier-card reveal";
+    card.className = "plane-inner glass-plane tier-card reveal";
     if (tier.recommended) {
       card.classList.add("is-recommended");
       const badge = document.createElement("span");
