@@ -136,7 +136,9 @@ window.SiteContent = {
       {
         id: "free",
         name: "Free",
+        tagline: "Get started",
         price: "Contact for pricing",
+        ctaLabel: "Select",
         bullets: [
           "Verification + onboarding",
           "Distribution access",
@@ -147,7 +149,10 @@ window.SiteContent = {
       {
         id: "gold",
         name: "Gold",
+        tagline: "Grow your brand",
         price: "Contact for pricing",
+        ctaLabel: "Select",
+        recommended: true,
         bullets: [
           "Official profiles setup",
           "Artist ID matching",
@@ -159,7 +164,9 @@ window.SiteContent = {
       {
         id: "platinum",
         name: "Platinum",
+        tagline: "Engage your audience",
         price: "Contact for pricing",
+        ctaLabel: "Select",
         bullets: [
           "Immersive campaigns",
           "Engagement insights",
@@ -171,7 +178,9 @@ window.SiteContent = {
       {
         id: "diamond",
         name: "Diamond",
+        tagline: "Scale your business",
         price: "Contact for pricing",
+        ctaLabel: "Select",
         bullets: [
           "Full immersive suite (10 styles)",
           "Omnichannel marketing",
