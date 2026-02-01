@@ -25,6 +25,15 @@
     return link;
   };
 
+  const buildTextLink = (href, label, className = "cta-button") => {
+    const link = document.createElement("a");
+    link.href = href;
+    link.className = className;
+    link.textContent = label;
+    link.setAttribute("aria-label", label);
+    return link;
+  };
+
   content.nav.forEach((item) => {
     const link = buildImageLink(item.href, navAssets[item.id], item.label);
     if (item.id === "apply") link.classList.add("apply-link");
@@ -49,8 +58,9 @@
   document.getElementById("hero-subhead").textContent = content.hero.subhead;
   const heroCtas = document.getElementById("hero-ctas");
   content.hero.ctas.forEach((cta) => {
-    const src = cta.label === "Apply" ? "assets/cta-apply.svg" : "assets/cta-tiers.svg";
-    heroCtas.appendChild(buildImageLink(cta.href, src, cta.label));
+    const className =
+      cta.label === "Apply" ? "cta-button is-primary" : "cta-button";
+    heroCtas.appendChild(buildTextLink(cta.href, cta.label, className));
   });
 
   document.getElementById("proof-title").textContent = content.proofStripTitle;
@@ -241,13 +251,13 @@
   document.getElementById("final-subtitle").textContent = content.finalCta.sentence;
   const finalCtas = document.getElementById("final-ctas");
   finalCtas.appendChild(
-    buildImageLink("apply.html", "assets/cta-apply.svg", content.finalCta.applyLabel)
+    buildTextLink("apply.html", content.finalCta.applyLabel, "cta-button is-primary")
   );
   finalCtas.appendChild(
-    buildImageLink(
+    buildTextLink(
       `mailto:${content.brand.email}`,
-      "assets/cta-email.svg",
-      content.finalCta.emailLabel
+      content.finalCta.emailLabel,
+      "cta-button"
     )
   );
 
