@@ -156,30 +156,60 @@
     outer.setAttribute("data-parallax", "");
     const card = document.createElement("div");
     card.className = "plane-inner glass-plane tier-card reveal";
-    const tierImg = document.createElement("img");
-    tierImg.src = `assets/tier-${tier.id}.svg`;
-    tierImg.alt = `${tier.name} tier`;
+    if (tier.recommended) {
+      card.classList.add("is-recommended");
+      const badge = document.createElement("span");
+      badge.className = "tier-badge";
+      badge.textContent = "Recommended";
+      card.appendChild(badge);
+    }
+    const header = document.createElement("div");
+    header.className = "tier-header";
     const title = document.createElement("h3");
     title.textContent = tier.name;
+    const tagline = document.createElement("p");
+    tagline.className = "tier-tagline";
+    tagline.textContent = tier.tagline || "";
+    header.appendChild(title);
+    header.appendChild(tagline);
     const price = document.createElement("div");
-    price.className = "price";
-    price.textContent = tier.price;
+    price.className = "tier-price";
+    if (tier.priceAmount) {
+      const amount = document.createElement("span");
+      amount.className = "tier-price-amount";
+      amount.textContent = tier.priceAmount;
+      const period = document.createElement("span");
+      period.className = "tier-price-period";
+      period.textContent = tier.pricePeriod || "";
+      price.appendChild(amount);
+      price.appendChild(period);
+    } else {
+      const priceText = document.createElement("span");
+      priceText.className = "tier-price-text";
+      priceText.textContent = tier.price || "";
+      price.appendChild(priceText);
+    }
+    const cta = document.createElement("a");
+    cta.className = "tier-select";
+    cta.href = `apply.html?tier=${tier.id}`;
+    cta.textContent = tier.ctaLabel || "Select";
     const list = document.createElement("ul");
+    list.className = "tier-features";
     tier.bullets.forEach((bullet) => {
       const li = document.createElement("li");
       li.textContent = bullet;
       list.appendChild(li);
     });
-    const applyLink = buildImageLink(
-      `apply.html?tier=${tier.id}`,
-      "assets/cta-apply.svg",
-      `Apply for ${tier.name}`
-    );
-    card.appendChild(tierImg);
-    card.appendChild(title);
+    card.appendChild(header);
     card.appendChild(price);
+    card.appendChild(cta);
     card.appendChild(list);
-    card.appendChild(applyLink);
+    if (tier.note) {
+      const note = document.createElement("div");
+      note.className = "tier-note";
+      note.textContent = tier.note;
+      card.appendChild(note);
+    }
     outer.appendChild(card);
     tierGrid.appendChild(outer);
   });
