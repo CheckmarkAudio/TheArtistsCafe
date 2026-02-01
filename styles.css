@@ -612,10 +612,6 @@ button:disabled {
     scroll-behavior: auto;
   }
 
-  .bg-video {
-    display: none;
-  }
-
   .plane-inner,
   .img-link img,
   .img-link svg {

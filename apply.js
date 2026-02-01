@@ -592,8 +592,6 @@
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReducedMotion) {
     document.body.classList.add("reduced-motion");
-    const video = document.querySelector(".bg-video");
-    if (video) video.pause();
     return;
   }
 
