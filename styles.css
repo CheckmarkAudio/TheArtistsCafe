@@ -216,7 +216,8 @@ nav.top-nav {
 }
 
 .brand-mark {
-  height: 44px;
+  height: 52px;
+  width: auto;
 }
 
 .fixed-apply {
@@ -262,6 +263,11 @@ nav.top-nav {
 
 .hero-content {
   padding: 40px;
+}
+
+.hero-logo {
+  width: min(320px, 70vw);
+  margin: 0 0 24px;
 }
 
 .hero h1 {
@@ -409,6 +415,11 @@ nav.top-nav {
 
 .apply-hero {
   padding: 120px 0 40px;
+}
+
+.apply-logo {
+  width: min(160px, 50vw);
+  margin: 0 0 18px;
 }
 
 .wizard {
