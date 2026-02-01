@@ -4,17 +4,17 @@
   --bg-veil: rgba(6, 6, 10, 0.6);
   --plane: rgba(14, 14, 20, 0.7);
   --border: rgba(255, 255, 255, 0.12);
-  --glow: rgba(120, 110, 255, 0.35);
-  --text: #eef0ff;
-  --muted: #b6b7c7;
-  --accent: #7a6bff;
+  --glow: rgba(92, 150, 176, 0.35);
+  --text: #5c96b0;
+  --muted: #5c96b0;
+  --accent: #5c96b0;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --dur-fast: 160ms;
   --dur-med: 320ms;
   --dur-slow: 760ms;
   --radius: 18px;
   --shadow: 0 18px 40px rgba(5, 5, 12, 0.5);
-  --shadow-hover: 0 22px 50px rgba(76, 70, 160, 0.4);
+  --shadow-hover: 0 22px 50px rgba(92, 150, 176, 0.4);
   --content-max: 1160px;
 }
 
