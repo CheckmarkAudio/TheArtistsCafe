@@ -69,6 +69,108 @@
         </div>
       </section>
 
+      <section class="section sidebar-showcase" id="network">
+        <div class="container">
+          <div class="sidebar-layout">
+            <div class="float-plane" data-parallax>
+              <div class="plane-inner glass-plane reveal sidebar-copy">
+                <p class="sidebar-kicker">From the network</p>
+                <h2 class="section-title">Explore the UMG ecosystem</h2>
+                <p class="section-subtitle">
+                  A compact, expandable sidebar keeps links and featured updates in reach
+                  without stealing the stage. Collapse it when you want the story, expand
+                  it when you need context.
+                </p>
+                <div class="cta-row">
+                  <a class="cta-button" href="#tiers">View membership tiers</a>
+                </div>
+              </div>
+            </div>
+
+            <aside class="expandable-sidebar" id="expandable-sidebar">
+              <button
+                class="sidebar-toggle"
+                id="sidebar-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="sidebar-panel"
+              >
+                <span>Explore</span>
+                <span class="toggle-icon" aria-hidden="true">☰</span>
+              </button>
+              <div
+                class="sidebar-panel glass-plane"
+                id="sidebar-panel"
+                aria-hidden="true"
+              >
+                <div class="sidebar-panel-header">
+                  <div>
+                    <p class="sidebar-label">UMG</p>
+                    <h3>Side panel</h3>
+                  </div>
+                  <button
+                    class="sidebar-close"
+                    id="sidebar-close"
+                    type="button"
+                    aria-label="Close sidebar"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <nav class="sidebar-links">
+                  <a class="sidebar-link" href="#">Home</a>
+                  <a class="sidebar-link" href="#">UMG</a>
+                  <a class="sidebar-link" href="#">Our Labels &amp; Brands</a>
+                  <a class="sidebar-link" href="#">Global Impact</a>
+                  <a class="sidebar-link" href="#">Digital Innovation</a>
+                  <a class="sidebar-link" href="#">For UMG Artists</a>
+                  <a class="sidebar-link" href="#">Careers at UMG</a>
+                  <a class="sidebar-link" href="#">Investor Relations</a>
+                  <a class="sidebar-link" href="#">Contact Us</a>
+                </nav>
+
+                <div class="sidebar-ad">
+                  <div class="ad-header">
+                    <span>Featured</span>
+                    <div class="ad-controls">
+                      <button class="ad-arrow" type="button" data-ad-prev>
+                        ‹
+                      </button>
+                      <button class="ad-arrow" type="button" data-ad-next>
+                        ›
+                      </button>
+                    </div>
+                  </div>
+                  <div class="ad-rotator" data-ad-rotator>
+                    <div class="ad-slide is-active">
+                      <div class="ad-card">
+                        <p class="ad-eyebrow">Forbes</p>
+                        <p class="ad-title">America's best midsize employers</p>
+                        <p class="ad-foot">2025 · Powered by Statista</p>
+                      </div>
+                    </div>
+                    <div class="ad-slide">
+                      <div class="ad-card">
+                        <p class="ad-eyebrow">Spotlight</p>
+                        <p class="ad-title">Digital innovation showcase</p>
+                        <p class="ad-foot">Immersive activations</p>
+                      </div>
+                    </div>
+                    <div class="ad-slide">
+                      <div class="ad-card">
+                        <p class="ad-eyebrow">Featured</p>
+                        <p class="ad-title">Global impact report</p>
+                        <p class="ad-foot">Artists &amp; communities</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
       <section class="section">
         <div class="container">
           <div class="float-plane" data-parallax>
@@ -169,23 +271,65 @@
     <footer class="site-footer">
       <div class="container">
         <div class="footer-grid">
-          <a class="footer-tile" href="#" aria-label="UMG">
+          <a
+            class="footer-tile"
+            href="#"
+            aria-label="UMG"
+            style="
+              --tile-image: url('https://static.wixstatic.com/media/afbb39_fe5bef6d47cc4be7b278977dede9493c~mv2.jpg');
+            "
+          >
             <span class="footer-tile-title">UMG</span>
             <span class="footer-tile-sub">about us</span>
           </a>
-          <a class="footer-tile" href="#" aria-label="Our Labels &amp; Brands">
+          <a
+            class="footer-tile"
+            href="#"
+            aria-label="Our Labels &amp; Brands"
+            style="
+              --tile-image: url('https://static.wixstatic.com/media/afbb39_7be98d85b3c94da0b2e0ee9ea5a57561~mv2.jpg');
+            "
+          >
             <span class="footer-tile-title">Our Labels &amp; Brands</span>
           </a>
-          <a class="footer-tile" href="#" aria-label="Global Impact">
+          <a
+            class="footer-tile"
+            href="#"
+            aria-label="Global Impact"
+            style="
+              --tile-image: url('https://static.wixstatic.com/media/afbb39_013d9972f2f94ac9bc620579d098e203~mv2.jpg');
+            "
+          >
             <span class="footer-tile-title">Global Impact</span>
           </a>
-          <a class="footer-tile" href="#" aria-label="For UMG Artists">
+          <a
+            class="footer-tile"
+            href="#"
+            aria-label="For UMG Artists"
+            style="
+              --tile-image: url('https://static.wixstatic.com/media/afbb39_e44b26fcc8b1482aa98856068bb99b0b~mv2.jpg');
+            "
+          >
             <span class="footer-tile-title">For UMG Artists</span>
           </a>
-          <a class="footer-tile" href="#" aria-label="Careers">
+          <a
+            class="footer-tile"
+            href="#"
+            aria-label="Careers"
+            style="
+              --tile-image: url('https://static.wixstatic.com/media/afbb39_35f0be245478438c90b1db8bd98e4d5b~mv2.jpg');
+            "
+          >
             <span class="footer-tile-title">Careers</span>
           </a>
-          <a class="footer-tile" href="#" aria-label="U-Discover">
+          <a
+            class="footer-tile"
+            href="#"
+            aria-label="U-Discover"
+            style="
+              --tile-image: url('https://static.wixstatic.com/media/afbb39_fe5bef6d47cc4be7b278977dede9493c~mv2.jpg');
+            "
+          >
             <span class="footer-tile-title">U-Discover</span>
             <span class="footer-tile-sub">explore our music</span>
           </a>
