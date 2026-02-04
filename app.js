@@ -46,7 +46,18 @@
     if (img) img.alt = content.finalCta.applyLabel;
   }
 
-  document.getElementById("hero-headline").textContent = content.hero.headline;
+  const heroHeadline = document.getElementById("hero-headline");
+  if (heroHeadline) {
+    const highlightText = "Global distribution";
+    if (content.hero.headline.includes(highlightText)) {
+      heroHeadline.innerHTML = content.hero.headline.replace(
+        highlightText,
+        `<span class="hero-highlight">${highlightText}</span>`
+      );
+    } else {
+      heroHeadline.textContent = content.hero.headline;
+    }
+  }
   document.getElementById("hero-subhead").textContent = content.hero.subhead;
   const heroCtas = document.getElementById("hero-ctas");
   content.hero.ctas.forEach((cta) => {
