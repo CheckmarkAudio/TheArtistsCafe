@@ -439,6 +439,12 @@ nav.top-nav .nav-pill.is-primary:hover {
     color var(--dur-fast) var(--ease);
 }
 
+.cta-button:not(.is-primary) {
+  box-shadow:
+    0 0 0 2px rgba(120, 199, 220, 0.6),
+    0 10px 22px rgba(88, 188, 255, 0.22);
+}
+
 .cta-button:hover {
   transform: translateY(-1px);
   box-shadow:
