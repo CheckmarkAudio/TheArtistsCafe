@@ -101,11 +101,22 @@ main {
   padding-top: 72px;
 }
 
-.sidebar-layout {
+.sticky-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
   gap: 32px;
   align-items: start;
+  width: min(100% - 32px, var(--content-max));
+  margin: 0 auto;
+}
+
+.sticky-content {
+  min-width: 0;
+}
+
+.sticky-content .container {
+  width: 100%;
+  margin: 0;
 }
 
 .sidebar-copy {
@@ -121,10 +132,12 @@ main {
 }
 
 .expandable-sidebar {
-  position: relative;
+  position: sticky;
+  top: 120px;
   display: grid;
-  justify-items: end;
+  justify-items: stretch;
   gap: 12px;
+  align-self: start;
 }
 
 .sidebar-toggle {
@@ -161,7 +174,7 @@ main {
 }
 
 .sidebar-panel {
-  width: 300px;
+  width: 100%;
   padding: 20px;
   display: grid;
   gap: 18px;
@@ -169,6 +182,8 @@ main {
   opacity: 0;
   pointer-events: none;
   transition: transform var(--dur-med) var(--ease), opacity var(--dur-med) var(--ease);
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
 }
 
 .expandable-sidebar.is-expanded .sidebar-panel {
@@ -1238,6 +1253,10 @@ button:disabled {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 18px;
   grid-auto-rows: 1fr;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 0 max(16px, calc((100vw - var(--content-max)) / 2));
 }
 
 .footer-tile {
@@ -1418,16 +1437,16 @@ button:disabled {
 }
 
 @media (max-width: 960px) {
-  .sidebar-layout {
+  .sticky-layout {
     grid-template-columns: 1fr;
   }
 
   .expandable-sidebar {
-    justify-items: stretch;
+    position: static;
   }
 
   .sidebar-panel {
-    width: 100%;
+    max-height: none;
   }
 
   .sidebar-toggle {
