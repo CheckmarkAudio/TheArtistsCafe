@@ -283,6 +283,79 @@
   revealElements.forEach((el) => observer.observe(el));
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const sidebar = document.getElementById("expandable-sidebar");
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+  const sidebarPanel = document.getElementById("sidebar-panel");
+  const sidebarClose = document.getElementById("sidebar-close");
+
+  const setSidebarExpanded = (isExpanded) => {
+    if (!sidebar) return;
+    sidebar.classList.toggle("is-expanded", isExpanded);
+    if (sidebarToggle) sidebarToggle.setAttribute("aria-expanded", String(isExpanded));
+    if (sidebarPanel) sidebarPanel.setAttribute("aria-hidden", String(!isExpanded));
+  };
+
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener("click", () => {
+      const nextState = !sidebar?.classList.contains("is-expanded");
+      setSidebarExpanded(nextState);
+    });
+  }
+
+  if (sidebarClose) {
+    sidebarClose.addEventListener("click", () => setSidebarExpanded(false));
+  }
+
+  const adRotator = document.querySelector("[data-ad-rotator]");
+  const adPrev = document.querySelector("[data-ad-prev]");
+  const adNext = document.querySelector("[data-ad-next]");
+  const adSlides = adRotator
+    ? Array.from(adRotator.querySelectorAll(".ad-slide"))
+    : [];
+  let adIndex = 0;
+  let adTimer = null;
+
+  const showAdSlide = (index) => {
+    if (!adSlides.length) return;
+    adSlides.forEach((slide, slideIndex) => {
+      slide.classList.toggle("is-active", slideIndex === index);
+    });
+  };
+
+  const queueAdRotation = () => {
+    if (!adSlides.length) return;
+    if (adTimer) window.clearInterval(adTimer);
+    if (!prefersReducedMotion) {
+      adTimer = window.setInterval(() => {
+        adIndex = (adIndex + 1) % adSlides.length;
+        showAdSlide(adIndex);
+      }, 4200);
+    }
+  };
+
+  if (adSlides.length) {
+    showAdSlide(adIndex);
+    queueAdRotation();
+  }
+
+  if (adPrev) {
+    adPrev.addEventListener("click", () => {
+      if (!adSlides.length) return;
+      adIndex = (adIndex - 1 + adSlides.length) % adSlides.length;
+      showAdSlide(adIndex);
+      queueAdRotation();
+    });
+  }
+
+  if (adNext) {
+    adNext.addEventListener("click", () => {
+      if (!adSlides.length) return;
+      adIndex = (adIndex + 1) % adSlides.length;
+      showAdSlide(adIndex);
+      queueAdRotation();
+    });
+  }
+
   if (prefersReducedMotion) {
     document.body.classList.add("reduced-motion");
     return;
