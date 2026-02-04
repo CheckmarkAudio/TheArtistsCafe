@@ -310,16 +310,18 @@ nav.top-nav .nav-pill.is-primary:hover {
 }
 
 .brand-mark {
-  height: 38px;
+  height: 50px;
   width: auto;
 }
 
 .fixed-apply {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: max(16px, env(safe-area-inset-top));
+  right: max(16px, env(safe-area-inset-right));
+  left: auto;
   z-index: 12;
   display: none;
+  max-width: calc(100vw - 32px);
 }
 
 .fixed-apply.cta-button {
