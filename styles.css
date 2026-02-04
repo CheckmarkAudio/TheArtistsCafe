@@ -443,6 +443,8 @@ nav.top-nav .nav-pill.is-primary:hover {
   box-shadow:
     0 0 0 2px rgba(120, 199, 220, 0.6),
     0 10px 22px rgba(88, 188, 255, 0.22);
+  border-color: rgba(88, 188, 255, 0.6);
+  animation: cta-outline-shift 26s ease-in-out infinite;
 }
 
 .cta-button:hover {
@@ -531,6 +533,27 @@ nav.top-nav .nav-pill.is-primary:hover {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes cta-outline-shift {
+  0% {
+    border-color: rgba(88, 188, 255, 0.65);
+    box-shadow:
+      0 0 0 2px rgba(88, 188, 255, 0.6),
+      0 10px 22px rgba(88, 188, 255, 0.22);
+  }
+  50% {
+    border-color: rgba(255, 156, 92, 0.65);
+    box-shadow:
+      0 0 0 2px rgba(255, 156, 92, 0.55),
+      0 10px 22px rgba(255, 156, 92, 0.22);
+  }
+  100% {
+    border-color: rgba(88, 188, 255, 0.65);
+    box-shadow:
+      0 0 0 2px rgba(88, 188, 255, 0.6),
+      0 10px 22px rgba(88, 188, 255, 0.22);
   }
 }
 
