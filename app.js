@@ -61,9 +61,8 @@
   document.getElementById("hero-subhead").textContent = content.hero.subhead;
   const heroCtas = document.getElementById("hero-ctas");
   content.hero.ctas.forEach((cta) => {
-    const className =
-      cta.label === "Apply" ? "cta-button is-primary" : "cta-button";
-    heroCtas.appendChild(buildTextLink(cta.href, cta.label, className));
+    if (cta.label === "Apply") return;
+    heroCtas.appendChild(buildTextLink(cta.href, cta.label, "cta-button"));
   });
 
   document.getElementById("proof-title").textContent = content.proofStripTitle;
