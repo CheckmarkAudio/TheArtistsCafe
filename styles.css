@@ -103,7 +103,7 @@ main {
 
 .sticky-layout {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 32px;
   align-items: start;
   width: 100%;
@@ -142,6 +142,12 @@ main {
   height: 100vh;
   background: #000000;
   padding: 20px 16px;
+  width: 72px;
+  transition: width var(--dur-med) var(--ease);
+}
+
+.expandable-sidebar.is-expanded {
+  width: 280px;
 }
 
 .sidebar-toggle {
@@ -177,27 +183,32 @@ main {
   font-size: 14px;
 }
 
-.sidebar-panel {
-  width: 100%;
-  padding: 20px;
-  display: grid;
-  gap: 18px;
-  transform: translateX(16px);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform var(--dur-med) var(--ease), opacity var(--dur-med) var(--ease);
-  height: 100%;
-  max-height: none;
-  overflow-y: auto;
-  background: #000000;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: none;
+.expandable-sidebar:not(.is-expanded) .sidebar-toggle {
+  justify-content: center;
 }
 
-.expandable-sidebar.is-expanded .sidebar-panel {
+.expandable-sidebar:not(.is-expanded) .sidebar-toggle span:first-child {
+  display: none;
+}
+
+.sidebar-body {
+  width: 100%;
+  padding: 16px 8px 20px;
+  display: grid;
+  gap: 18px;
+  transform: translateX(-8px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform var(--dur-med) var(--ease), opacity var(--dur-med) var(--ease);
+  height: calc(100% - 56px);
+  overflow-y: auto;
+}
+
+.expandable-sidebar.is-expanded .sidebar-body {
   transform: translateX(0);
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -1281,8 +1292,8 @@ button:disabled {
   gap: 6px;
   background-image: linear-gradient(
       180deg,
-      rgba(6, 10, 14, 0.08) 0%,
-      rgba(6, 10, 14, 0.78) 70%
+      rgba(6, 10, 14, 0.03) 0%,
+      rgba(6, 10, 14, 0.45) 70%
     ),
     var(
       --tile-image,
@@ -1301,9 +1312,9 @@ button:disabled {
   inset: 0;
   background: linear-gradient(
     200deg,
-    rgba(4, 6, 10, 0.5),
-    rgba(4, 6, 10, 0.25) 45%,
-    rgba(4, 6, 10, 0.1)
+    rgba(4, 6, 10, 0.32),
+    rgba(4, 6, 10, 0.16) 45%,
+    rgba(4, 6, 10, 0.05)
   );
   mix-blend-mode: multiply;
 }
@@ -1452,6 +1463,7 @@ button:disabled {
 
   .expandable-sidebar {
     position: static;
+    width: 100%;
   }
 
   .sidebar-panel {
