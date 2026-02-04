@@ -285,14 +285,14 @@
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const sidebar = document.getElementById("expandable-sidebar");
   const sidebarToggle = document.getElementById("sidebar-toggle");
-  const sidebarPanel = document.getElementById("sidebar-panel");
+  const sidebarBody = document.getElementById("sidebar-body");
   const sidebarClose = document.getElementById("sidebar-close");
 
   const setSidebarExpanded = (isExpanded) => {
     if (!sidebar) return;
     sidebar.classList.toggle("is-expanded", isExpanded);
     if (sidebarToggle) sidebarToggle.setAttribute("aria-expanded", String(isExpanded));
-    if (sidebarPanel) sidebarPanel.setAttribute("aria-hidden", String(!isExpanded));
+    if (sidebarBody) sidebarBody.setAttribute("aria-hidden", String(!isExpanded));
   };
 
   if (sidebarToggle) {
