@@ -422,11 +422,13 @@ nav.top-nav .nav-pill.is-primary:hover {
   padding: 12px 28px;
   border-radius: 999px;
   border: 1px solid var(--accent);
-  color: var(--accent);
+  color: #ffffff;
   font-weight: 600;
   letter-spacing: 0.2px;
   background: transparent;
-  box-shadow: 0 12px 22px rgba(118, 198, 218, 0.18);
+  box-shadow:
+    0 0 0 1px rgba(120, 199, 220, 0.45),
+    0 10px 22px rgba(88, 188, 255, 0.2);
   position: relative;
   z-index: 1;
   transition: transform var(--dur-fast) var(--ease),
@@ -437,7 +439,9 @@ nav.top-nav .nav-pill.is-primary:hover {
 
 .cta-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 16px 26px rgba(118, 198, 218, 0.26);
+  box-shadow:
+    0 0 0 1px rgba(120, 199, 220, 0.65),
+    0 16px 26px rgba(88, 188, 255, 0.3);
 }
 
 .cta-button.is-primary {
@@ -445,7 +449,7 @@ nav.top-nav .nav-pill.is-primary:hover {
   z-index: 0;
   isolation: isolate;
   background: var(--accent);
-  color: #061018;
+  color: #ffffff;
   box-shadow: 0 16px 28px rgba(118, 198, 218, 0.32);
   animation: cta-primary-color 26s ease-in-out infinite;
 }
