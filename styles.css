@@ -103,15 +103,16 @@ main {
 
 .sticky-layout {
   display: grid;
-  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+  grid-template-columns: 280px minmax(0, 1fr);
   gap: 32px;
   align-items: start;
-  width: min(100% - 32px, var(--content-max));
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 
 .sticky-content {
   min-width: 0;
+  padding: 0 32px;
 }
 
 .sticky-content .container {
@@ -133,11 +134,14 @@ main {
 
 .expandable-sidebar {
   position: sticky;
-  top: 120px;
+  top: 0;
   display: grid;
   justify-items: stretch;
   gap: 12px;
   align-self: start;
+  height: 100vh;
+  background: #000000;
+  padding: 20px 16px;
 }
 
 .sidebar-toggle {
@@ -145,9 +149,9 @@ main {
   align-items: center;
   gap: 10px;
   padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(120, 199, 220, 0.45);
-  background: rgba(10, 16, 24, 0.7);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #000000;
   color: var(--text);
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -182,8 +186,13 @@ main {
   opacity: 0;
   pointer-events: none;
   transition: transform var(--dur-med) var(--ease), opacity var(--dur-med) var(--ease);
-  max-height: calc(100vh - 180px);
+  height: 100%;
+  max-height: none;
   overflow-y: auto;
+  background: #000000;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
 }
 
 .expandable-sidebar.is-expanded .sidebar-panel {
@@ -215,9 +224,9 @@ main {
 .sidebar-close {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
+  background: #000000;
   color: var(--text);
   display: inline-flex;
   align-items: center;
@@ -244,8 +253,8 @@ main {
 
 .sidebar-link {
   padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--text);
   font-size: 13px;
   letter-spacing: 0.08em;
@@ -258,7 +267,7 @@ main {
 .sidebar-link:hover {
   transform: translateY(-1px);
   border-color: rgba(120, 199, 220, 0.55);
-  background: rgba(10, 16, 24, 0.6);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .sidebar-ad {
@@ -284,9 +293,9 @@ main {
 .ad-arrow {
   width: 26px;
   height: 26px;
-  border-radius: 50%;
+  border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
+  background: #000000;
   color: var(--text);
   font-size: 16px;
   display: inline-flex;
@@ -324,15 +333,15 @@ main {
 
 .ad-card {
   min-height: 170px;
-  border-radius: 16px;
+  border-radius: 6px;
   padding: 18px;
   display: grid;
   align-content: center;
   gap: 8px;
   text-align: center;
-  background: linear-gradient(160deg, rgba(12, 18, 28, 0.9), rgba(6, 10, 18, 0.82));
-  border: 1px solid rgba(120, 199, 220, 0.28);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
 }
 
 .ad-eyebrow {
