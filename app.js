@@ -84,15 +84,16 @@
           logo.alt = `${item.name} logo`;
           logo.loading = "lazy";
           card.appendChild(logo);
+        } else {
+          const name = document.createElement("span");
+          name.className = "affiliate-name";
+          name.textContent = item.name;
+          const type = document.createElement("span");
+          type.className = "affiliate-type";
+          type.textContent = item.type;
+          card.appendChild(name);
+          card.appendChild(type);
         }
-        const name = document.createElement("span");
-        name.className = "affiliate-name";
-        name.textContent = item.name;
-        const type = document.createElement("span");
-        type.className = "affiliate-type";
-        type.textContent = item.type;
-        card.appendChild(name);
-        card.appendChild(type);
         track.appendChild(card);
       });
       return track;
