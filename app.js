@@ -66,12 +66,6 @@
     heroCtas.appendChild(buildTextLink(cta.href, cta.label, className));
   });
 
-  const affiliatesTitle = document.getElementById("affiliates-title");
-  const affiliatesSubtitle = document.getElementById("affiliates-subtitle");
-  if (affiliatesTitle) affiliatesTitle.textContent = content.affiliates?.headline || "";
-  if (affiliatesSubtitle) {
-    affiliatesSubtitle.textContent = content.affiliates?.sentence || "";
-  }
   const affiliateMarquee = document.getElementById("affiliate-marquee");
   if (affiliateMarquee && content.affiliates?.items?.length) {
     const scroller = document.createElement("div");

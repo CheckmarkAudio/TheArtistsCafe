@@ -28,8 +28,6 @@ window.SiteContent = {
     ],
   },
   affiliates: {
-    headline: "Affiliates + associated companies",
-    sentence: "Trusted partners and aligned creative platforms.",
     items: [
       { name: "HallPass International", type: "Affiliate" },
       { name: "UMG", type: "Associated" },
