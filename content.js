@@ -34,6 +34,12 @@ window.SiteContent = {
         type: "Affiliate",
       },
       {
+        name: "Checkmark Audio",
+        type: "Affiliate",
+        logo:
+          "https://static.wixstatic.com/media/afbb39_ad46dbc0ab0f434ab7b01e85f36e5c50~mv2.webp",
+      },
+      {
         name: "UMG",
         type: "Associated",
       },
