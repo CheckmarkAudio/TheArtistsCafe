@@ -74,26 +74,15 @@
       const track = document.createElement("div");
       track.className = "affiliate-track";
       content.affiliates.items.forEach((item) => {
+        if (!item.logo) return;
         const card = document.createElement("div");
-        card.className = "affiliate-item";
-        if (item.logo) {
-          card.classList.add("has-logo");
-          const logo = document.createElement("img");
-          logo.className = "affiliate-logo";
-          logo.src = item.logo;
-          logo.alt = `${item.name} logo`;
-          logo.loading = "lazy";
-          card.appendChild(logo);
-        } else {
-          const name = document.createElement("span");
-          name.className = "affiliate-name";
-          name.textContent = item.name;
-          const type = document.createElement("span");
-          type.className = "affiliate-type";
-          type.textContent = item.type;
-          card.appendChild(name);
-          card.appendChild(type);
-        }
+        card.className = "affiliate-item has-logo";
+        const logo = document.createElement("img");
+        logo.className = "affiliate-logo";
+        logo.src = item.logo;
+        logo.alt = `${item.name} logo`;
+        logo.loading = "lazy";
+        card.appendChild(logo);
         track.appendChild(card);
       });
       return track;
