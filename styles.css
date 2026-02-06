@@ -1362,19 +1362,19 @@ button:disabled {
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 18px;
+  gap: 0;
   grid-auto-rows: 1fr;
   width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
-  padding: 0 max(16px, calc((100vw - var(--content-max)) / 2));
+  padding: 0;
 }
 
 .footer-tile {
   position: relative;
   min-height: 170px;
   padding: 18px 16px;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   color: #f5f5f5;
   display: flex;
@@ -1392,7 +1392,7 @@ button:disabled {
     );
   background-size: cover;
   background-position: center;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: none;
   transition: transform var(--dur-fast) var(--ease),
     box-shadow var(--dur-med) var(--ease);
 }
@@ -1414,8 +1414,8 @@ button:disabled {
   content: "";
   position: absolute;
   inset: 0;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: inherit;
+  border: none;
+  border-radius: 0;
   pointer-events: none;
 }
 
