@@ -416,8 +416,8 @@ main {
 }
 
 .glass-plane {
-  background: linear-gradient(160deg, rgba(16, 26, 34, 0.85), rgba(10, 16, 24, 0.68));
-  border: 1px solid var(--border);
+  background: linear-gradient(160deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75));
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
@@ -858,19 +858,16 @@ nav.top-nav .nav-pill.is-primary:hover {
 
 @keyframes hero-panel-shift {
   0% {
-    border-color: rgba(88, 188, 255, 0.35);
-    box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.08),
-      0 0 28px rgba(88, 188, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   }
   50% {
-    border-color: rgba(255, 156, 92, 0.35);
-    box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.08),
-      0 0 28px rgba(255, 156, 92, 0.22);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   }
   100% {
-    border-color: rgba(88, 188, 255, 0.35);
-    box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.08),
-      0 0 28px rgba(88, 188, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   }
 }
 
