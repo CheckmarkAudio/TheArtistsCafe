@@ -32,6 +32,82 @@
     </nav>
 
     <div class="mobile-dock" id="mobile-dock"></div>
+    <aside class="expandable-sidebar" id="expandable-sidebar">
+      <button
+        class="sidebar-toggle"
+        id="sidebar-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="sidebar-panel"
+      >
+        <span>Explore</span>
+        <span class="toggle-icon" aria-hidden="true">☰</span>
+      </button>
+      <div class="sidebar-panel" id="sidebar-panel" aria-hidden="true">
+        <div class="sidebar-panel-header">
+          <div>
+            <p class="sidebar-label">UMG</p>
+            <h3>Side panel</h3>
+          </div>
+          <button
+            class="sidebar-close"
+            id="sidebar-close"
+            type="button"
+            aria-label="Close sidebar"
+          >
+            ✕
+          </button>
+        </div>
+        <nav class="sidebar-links">
+          <a class="sidebar-link" href="#">Home</a>
+          <a class="sidebar-link" href="#">UMG</a>
+          <a class="sidebar-link" href="#">Our Labels &amp; Brands</a>
+          <a class="sidebar-link" href="#">Global Impact</a>
+          <a class="sidebar-link" href="#">Digital Innovation</a>
+          <a class="sidebar-link" href="#">For UMG Artists</a>
+          <a class="sidebar-link" href="#">Careers at UMG</a>
+          <a class="sidebar-link" href="#">Investor Relations</a>
+          <a class="sidebar-link" href="#">Contact Us</a>
+        </nav>
+
+        <div class="sidebar-ad">
+          <div class="ad-header">
+            <span>Featured</span>
+            <div class="ad-controls">
+              <button class="ad-arrow" type="button" data-ad-prev>
+                ‹
+              </button>
+              <button class="ad-arrow" type="button" data-ad-next>
+                ›
+              </button>
+            </div>
+          </div>
+          <div class="ad-rotator" data-ad-rotator>
+            <div class="ad-slide is-active">
+              <div class="ad-card">
+                <p class="ad-eyebrow">Forbes</p>
+                <p class="ad-title">America's best midsize employers</p>
+                <p class="ad-foot">2025 · Powered by Statista</p>
+              </div>
+            </div>
+            <div class="ad-slide">
+              <div class="ad-card">
+                <p class="ad-eyebrow">Spotlight</p>
+                <p class="ad-title">Digital innovation showcase</p>
+                <p class="ad-foot">Immersive activations</p>
+              </div>
+            </div>
+            <div class="ad-slide">
+              <div class="ad-card">
+                <p class="ad-eyebrow">Featured</p>
+                <p class="ad-title">Global impact report</p>
+                <p class="ad-foot">Artists &amp; communities</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
 
     <main id="top" class="site-shell">
       <section class="hero section">
@@ -51,82 +127,6 @@
           </video>
           <div class="hero-veil"></div>
         </div>
-        <aside class="expandable-sidebar" id="expandable-sidebar">
-          <button
-            class="sidebar-toggle"
-            id="sidebar-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="sidebar-panel"
-          >
-            <span>Explore</span>
-            <span class="toggle-icon" aria-hidden="true">☰</span>
-          </button>
-          <div class="sidebar-panel" id="sidebar-panel" aria-hidden="true">
-            <div class="sidebar-panel-header">
-              <div>
-                <p class="sidebar-label">UMG</p>
-                <h3>Side panel</h3>
-              </div>
-              <button
-                class="sidebar-close"
-                id="sidebar-close"
-                type="button"
-                aria-label="Close sidebar"
-              >
-                ✕
-              </button>
-            </div>
-            <nav class="sidebar-links">
-              <a class="sidebar-link" href="#">Home</a>
-              <a class="sidebar-link" href="#">UMG</a>
-              <a class="sidebar-link" href="#">Our Labels &amp; Brands</a>
-              <a class="sidebar-link" href="#">Global Impact</a>
-              <a class="sidebar-link" href="#">Digital Innovation</a>
-              <a class="sidebar-link" href="#">For UMG Artists</a>
-              <a class="sidebar-link" href="#">Careers at UMG</a>
-              <a class="sidebar-link" href="#">Investor Relations</a>
-              <a class="sidebar-link" href="#">Contact Us</a>
-            </nav>
-
-            <div class="sidebar-ad">
-              <div class="ad-header">
-                <span>Featured</span>
-                <div class="ad-controls">
-                  <button class="ad-arrow" type="button" data-ad-prev>
-                    ‹
-                  </button>
-                  <button class="ad-arrow" type="button" data-ad-next>
-                    ›
-                  </button>
-                </div>
-              </div>
-              <div class="ad-rotator" data-ad-rotator>
-                <div class="ad-slide is-active">
-                  <div class="ad-card">
-                    <p class="ad-eyebrow">Forbes</p>
-                    <p class="ad-title">America's best midsize employers</p>
-                    <p class="ad-foot">2025 · Powered by Statista</p>
-                  </div>
-                </div>
-                <div class="ad-slide">
-                  <div class="ad-card">
-                    <p class="ad-eyebrow">Spotlight</p>
-                    <p class="ad-title">Digital innovation showcase</p>
-                    <p class="ad-foot">Immersive activations</p>
-                  </div>
-                </div>
-                <div class="ad-slide">
-                  <div class="ad-card">
-                    <p class="ad-eyebrow">Featured</p>
-                    <p class="ad-title">Global impact report</p>
-                    <p class="ad-foot">Artists &amp; communities</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
         <div class="container">
           <div class="float-plane" data-parallax>
             <div class="plane-inner glass-plane hero-content reveal">
