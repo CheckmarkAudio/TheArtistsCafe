@@ -80,22 +80,6 @@
     proofStrip.appendChild(outer);
   });
 
-  document.getElementById("how-title").textContent = content.howItWorks.headline;
-  document.getElementById("how-subtitle").textContent = content.howItWorks.sentence;
-  const howSteps = document.getElementById("how-steps");
-  content.howItWorks.steps.forEach((step, index) => {
-    const outer = document.createElement("div");
-    outer.className = "float-plane";
-    outer.setAttribute("data-parallax", "");
-    const card = document.createElement("div");
-    card.className = "plane-inner open-plane step-card reveal";
-    card.textContent = `${index + 1}. ${step}`;
-    outer.appendChild(card);
-    howSteps.appendChild(outer);
-  });
-
-  document.getElementById("features-title").textContent = content.features.headline;
-  document.getElementById("features-subtitle").textContent = content.features.sentence;
   const featureGrid = document.getElementById("feature-grid");
   content.features.items.forEach((feature) => {
     const outer = document.createElement("div");

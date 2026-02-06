@@ -12,9 +12,8 @@ window.SiteContent = {
     applyNowLabel: "Apply now",
   },
   nav: [
-    { id: "how", label: "How It Works", href: "#how" },
-    { id: "features", label: "Features", href: "#features" },
     { id: "tiers", label: "Tiers", href: "#tiers" },
+    { id: "features", label: "Features", href: "#features" },
     { id: "faq", label: "FAQ", href: "#faq" },
     { id: "apply", label: "Apply", href: "apply.html" },
   ],
@@ -36,8 +35,8 @@ window.SiteContent = {
     "6-week playlisting push",
     "Keep 100% royalties",
   ],
-  proofStripTitle: "Proof at a glance",
-  proofStripSentence: "Fast credibility points you can scan in seconds.",
+  proofStripTitle: "Proof at a glance + what you get",
+  proofStripSentence: "Fast credibility points and the core benefits in one view.",
   howItWorks: {
     headline: "How it works",
     sentence: "Fast verification, clear options, immediate momentum.",
