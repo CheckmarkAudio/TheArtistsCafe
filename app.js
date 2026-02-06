@@ -66,6 +66,39 @@
     heroCtas.appendChild(buildTextLink(cta.href, cta.label, className));
   });
 
+  const affiliatesTitle = document.getElementById("affiliates-title");
+  const affiliatesSubtitle = document.getElementById("affiliates-subtitle");
+  if (affiliatesTitle) affiliatesTitle.textContent = content.affiliates?.headline || "";
+  if (affiliatesSubtitle) {
+    affiliatesSubtitle.textContent = content.affiliates?.sentence || "";
+  }
+  const affiliateMarquee = document.getElementById("affiliate-marquee");
+  if (affiliateMarquee && content.affiliates?.items?.length) {
+    const scroller = document.createElement("div");
+    scroller.className = "affiliate-scroller";
+    const buildTrack = () => {
+      const track = document.createElement("div");
+      track.className = "affiliate-track";
+      content.affiliates.items.forEach((item) => {
+        const card = document.createElement("div");
+        card.className = "affiliate-item";
+        const name = document.createElement("span");
+        name.className = "affiliate-name";
+        name.textContent = item.name;
+        const type = document.createElement("span");
+        type.className = "affiliate-type";
+        type.textContent = item.type;
+        card.appendChild(name);
+        card.appendChild(type);
+        track.appendChild(card);
+      });
+      return track;
+    };
+    scroller.appendChild(buildTrack());
+    scroller.appendChild(buildTrack());
+    affiliateMarquee.appendChild(scroller);
+  }
+
   document.getElementById("proof-title").textContent = content.proofStripTitle;
   document.getElementById("proof-subtitle").textContent = content.proofStripSentence;
   const proofStrip = document.getElementById("proof-strip");
