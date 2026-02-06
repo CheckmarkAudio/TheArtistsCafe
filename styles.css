@@ -136,7 +136,7 @@ main {
   padding: 12px;
   border-radius: 12px;
   border: 1px solid rgba(120, 199, 220, 0.3);
-  background: rgba(10, 14, 22, 0.65);
+  background: #ffffff;
   box-shadow: 0 10px 24px rgba(4, 8, 12, 0.35);
   white-space: nowrap;
   font-size: 13px;
