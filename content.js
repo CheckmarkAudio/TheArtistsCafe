@@ -29,16 +29,66 @@ window.SiteContent = {
   },
   affiliates: {
     items: [
-      { name: "HallPass International", type: "Affiliate" },
-      { name: "UMG", type: "Associated" },
-      { name: "Spotify", type: "Platform" },
-      { name: "Apple Music", type: "Platform" },
-      { name: "YouTube", type: "Platform" },
-      { name: "VEVO", type: "Platform" },
-      { name: "TikTok", type: "Platform" },
-      { name: "SoundCloud", type: "Platform" },
-      { name: "Bandcamp", type: "Platform" },
-      { name: "Amazon Music", type: "Platform" },
+      {
+        name: "HallPass International",
+        type: "Affiliate",
+        logo:
+          "https://static.wixstatic.com/media/afbb39_64f945b5b7114727a7602f08960e6bb7~mv2.png",
+      },
+      {
+        name: "UMG",
+        type: "Associated",
+        logo:
+          "https://static.wixstatic.com/media/afbb39_a2c267f8663b4dbebaed7af01f4fa3b2~mv2.png",
+      },
+      {
+        name: "Spotify",
+        type: "Platform",
+        logo:
+          "https://static.wixstatic.com/media/afbb39_50c94f758ce9431d9ad4cc0d5b2cf4a5~mv2.png",
+      },
+      {
+        name: "Apple Music",
+        type: "Platform",
+        logo:
+          "https://static.wixstatic.com/media/afbb39_8c4030637d98421db009f72dc11e8002~mv2.png",
+      },
+      {
+        name: "YouTube",
+        type: "Platform",
+        logo:
+          "https://static.wixstatic.com/media/afbb39_21da5456eaab4e2f9ba740907d838215~mv2.png",
+      },
+      {
+        name: "VEVO",
+        type: "Platform",
+        logo:
+          "https://static.wixstatic.com/media/afbb39_c2f7d5db241548619b34a09959132277~mv2.png",
+      },
+      {
+        name: "TikTok",
+        type: "Platform",
+        logo:
+          "https://static.wixstatic.com/media/afbb39_74ce8456b6f4457b883ba3a57cb66423~mv2.png",
+      },
+      {
+        name: "SoundCloud",
+        type: "Platform",
+        logo:
+          "https://static.wixstatic.com/media/afbb39_b36a596106bc4cec980d0c2f70b63821~mv2.webp",
+      },
+      {
+        name: "Bandcamp",
+        type: "Platform",
+        logo:
+          "https://static.wixstatic.com/media/afbb39_1c2e9e0060bf487a81f3896b06384771~mv2.png",
+      },
+      {
+        name: "Amazon Music",
+        type: "Platform",
+        logo:
+          "https://static.wixstatic.com/media/afbb39_3f70c2fbfc564427996b3068816f4afa~mv2.png",
+      },
       { name: "Pandora", type: "Platform" },
       { name: "Deezer", type: "Platform" },
     ],

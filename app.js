@@ -76,6 +76,15 @@
       content.affiliates.items.forEach((item) => {
         const card = document.createElement("div");
         card.className = "affiliate-item";
+        if (item.logo) {
+          card.classList.add("has-logo");
+          const logo = document.createElement("img");
+          logo.className = "affiliate-logo";
+          logo.src = item.logo;
+          logo.alt = `${item.name} logo`;
+          logo.loading = "lazy";
+          card.appendChild(logo);
+        }
         const name = document.createElement("span");
         name.className = "affiliate-name";
         name.textContent = item.name;

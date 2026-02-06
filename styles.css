@@ -142,6 +142,17 @@ main {
   font-size: 13px;
 }
 
+.affiliate-item.has-logo {
+  gap: 10px;
+}
+
+.affiliate-logo {
+  width: 86px;
+  height: 44px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(5, 10, 16, 0.4));
+}
+
 .affiliate-name {
   font-weight: 600;
   letter-spacing: 0.2px;
