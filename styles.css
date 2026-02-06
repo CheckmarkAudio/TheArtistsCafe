@@ -1,7 +1,7 @@
 :root {
   color-scheme: dark;
-  --bg: #070b10;
-  --bg-veil: rgba(6, 10, 14, 0.72);
+  --bg: #050505;
+  --bg-veil: rgba(0, 0, 0, 0.82);
   --plane: rgba(14, 22, 30, 0.74);
   --border: rgba(170, 210, 228, 0.2);
   --glow: rgba(118, 198, 218, 0.32);
@@ -70,7 +70,7 @@ main {
 .hero-veil {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(4, 4, 8, 0.8), var(--bg-veil));
+  background: linear-gradient(160deg, rgba(0, 0, 0, 0.86), var(--bg-veil));
 }
 
 #bg-canvas {
@@ -146,7 +146,7 @@ main {
   max-height: calc(100vh - 40px);
   padding: 0;
   background: transparent;
-  z-index: 6;
+  z-index: 20;
   transition: width var(--dur-med) var(--ease),
     height var(--dur-med) var(--ease);
 }
