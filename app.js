@@ -269,6 +269,18 @@
     const delay = (index % 6) * 80;
     el.style.transitionDelay = `${delay}ms`;
   });
+  const heroSection = document.querySelector(".hero");
+  if (heroSection) {
+    const navObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          document.body.classList.toggle("nav-hidden", !entry.isIntersecting);
+        });
+      },
+      { threshold: 0.08 }
+    );
+    navObserver.observe(heroSection);
+  }
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {

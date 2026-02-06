@@ -517,6 +517,13 @@ nav.top-nav {
   background: rgba(10, 8, 12, 0.82);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(18px);
+  transition: opacity var(--dur-med) var(--ease), transform var(--dur-med) var(--ease);
+}
+
+body.nav-hidden nav.top-nav {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
 }
 
 .nav-inner {
