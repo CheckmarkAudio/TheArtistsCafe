@@ -2,6 +2,14 @@
   const content = window.SiteContent;
   if (!content) return;
 
+  const getCssVar = (name, fallback) => {
+    const value = window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue(name)
+      .trim();
+    return value || fallback;
+  };
+
   const navLinks = document.getElementById("nav-links");
   const mobileDock = document.getElementById("mobile-dock");
 
@@ -165,6 +173,44 @@
       outer.appendChild(card);
       disclaimerGrid.appendChild(outer);
     });
+  }
+
+  const phygitalTitle = document.getElementById("phygital-title");
+  const phygitalSubtitle = document.getElementById("phygital-subtitle");
+  if (phygitalTitle) phygitalTitle.textContent = content.phygital?.headline || "";
+  if (phygitalSubtitle) phygitalSubtitle.textContent = content.phygital?.sentence || "";
+
+  const phygitalSkuGrid = document.getElementById("phygital-sku-grid");
+  if (phygitalSkuGrid) {
+    phygitalSkuGrid.innerHTML = "";
+    (content.phygital?.skus || []).forEach((sku) => {
+      const outer = document.createElement("div");
+      outer.className = "float-plane";
+      outer.setAttribute("data-parallax", "");
+      const card = document.createElement("div");
+      card.className = "plane-inner glass-plane feature-card reveal";
+      const title = document.createElement("h3");
+      title.textContent = sku.name;
+      const body = document.createElement("div");
+      renderCopy(body, sku.copy);
+      card.appendChild(title);
+      card.appendChild(body);
+      outer.appendChild(card);
+      phygitalSkuGrid.appendChild(outer);
+    });
+  }
+
+  const phygitalReportsCopy = document.getElementById("phygital-reports-copy");
+  if (phygitalReportsCopy) {
+    phygitalReportsCopy.innerHTML = "";
+    if (content.phygital?.reports?.title) {
+      const title = document.createElement("h3");
+      title.textContent = content.phygital.reports.title;
+      phygitalReportsCopy.appendChild(title);
+    }
+    const body = document.createElement("div");
+    renderCopy(body, content.phygital?.reports?.copy || "");
+    phygitalReportsCopy.appendChild(body);
   }
 
   const optionalServicesTitle = document.getElementById("optional-services-title");
@@ -347,6 +393,7 @@
     const ctx = canvas.getContext("2d");
     const particles = [];
     const state = { width: 0, height: 0, pointerX: 0, pointerY: 0 };
+    const particleColor = getCssVar("--particle-color", "rgba(95, 214, 230, 0.32)");
 
     const resize = () => {
       const { innerWidth, innerHeight } = window;
@@ -369,7 +416,7 @@
 
     const draw = () => {
       ctx.clearRect(0, 0, state.width, state.height);
-      ctx.fillStyle = "rgba(92, 150, 176, 0.35)";
+      ctx.fillStyle = particleColor;
       particles.forEach((p) => {
         const dx = (state.pointerX - p.x) * 0.0008;
         const dy = (state.pointerY - p.y) * 0.0008;

@@ -11,6 +11,7 @@ window.SiteContent = {
     { id: "membership", label: "Membership", href: "#membership" },
     { id: "support", label: "Support", href: "#support" },
     { id: "disclaimers", label: "Disclaimers", href: "#disclaimers" },
+    { id: "phygital", label: "Phygital + insights", href: "#phygital" },
     { id: "optional-services", label: "Optional services", href: "#optional-services" },
     { id: "faq", label: "FAQ", href: "#faq" },
     { id: "apply", label: "Apply", href: "apply.html" },
@@ -27,44 +28,45 @@ window.SiteContent = {
   membership: {
     headline: "What membership means",
     sentence:
-      "When you join Artist Cafe, you gain access to our distribution platform and become eligible for review by our team.",
+      "Artist Cafe Membership is $99/month or $999/year. Apply first — if approved, we’ll follow up with onboarding and payment.",
     allMembersTitle: "All members can:",
     bullets: [
       "Release music professionally",
       "Distribute audio and video (including VEVO)",
       "Collect and track royalties",
       "Maintain full control of their catalog",
+      "Use unlimited artist profiles, label profiles, and users (platform capability)",
     ],
     supportNote:
       "Additional support — including editorial submissions, platform verification, and promotional consideration — is offered selectively based on artist readiness and release quality.",
   },
   support: {
-    headline: "How Artist Cafe support works",
+    headline: "How additional opportunities work",
     sentence:
-      "Artist Cafe uses a status system to determine which artists and releases are eligible for additional opportunities.",
+      "Membership gives access. Additional opportunities are discretionary and reviewed on a rolling basis — often per release.",
     bullets: [
-      "Statuses are not paid upgrades.",
-      "They reflect where you are in your journey.",
-      "Statuses may change over time and are reviewed regularly.",
+      "Support is earned through readiness, quality, and operational reliability — not purchased.",
+      "Submission does not guarantee placement or approval. Outcomes are platform-dependent.",
+      "Not every release qualifies for every opportunity — and that’s by design.",
     ],
     statuses: [
       {
-        id: "opener",
-        name: "Opener",
+        id: "review",
+        name: "Review",
         copy:
-          "You’re officially part of Artist Cafe.\n\nYour releases are live, professionally distributed, and eligible for review. At this stage, our focus is ensuring smooth delivery, clean metadata, and a strong foundation for future releases.\n\nAs you continue releasing and building momentum, your work may be reviewed for additional opportunities.",
+          "We review artists and releases for readiness.\n\nWe look for professional release quality, clean metadata, rights clarity, and consistent execution.\n\nThis protects platform relationships and keeps support meaningful.",
       },
       {
-        id: "headliner",
-        name: "Headliner",
+        id: "eligibility",
+        name: "Eligibility",
         copy:
-          "You’ve been flagged as a Headliner artist.\n\nThis means your releases demonstrate professional readiness and may be considered for select platform opportunities, including:\n\n- Editorial playlist submission consideration\n- Platform verification submissions (where applicable)\n- Priority review for Artist Cafe features and highlights\n\nSubmission does not guarantee placement or approval, and all opportunities are subject to platform discretion.\n\nContinue releasing consistently and building momentum — status is reviewed on an ongoing basis.",
+          "When a release and profile are strong fits, we may consider submissions for:\n\n- Editorial pitching (discretionary)\n- Platform verification submissions (where applicable)\n- Artist Cafe features and spotlights when opportunities arise\n\nSubmission does not guarantee placement or approval. Decisions are made by third-party platforms and editors.",
       },
       {
-        id: "hitmaker",
-        name: "Hitmaker",
+        id: "cadence",
+        name: "Cadence",
         copy:
-          "Your project has been selected for active support.\n\nHitmaker status is invite-only and applies to releases that demonstrate strong momentum, strategic fit, and readiness for wider exposure.\n\nThis may include:\n\n- Priority editorial playlist submissions\n- VEVO video pitching and promotional consideration\n- Territory-specific opportunities when appropriate\n\nNot all releases qualify, and Hitmaker support is reviewed per project.",
+          "We reassess over time based on release quality, momentum, and responsiveness.\n\nIf a project isn’t selected for additional support, you can still release through Artist Cafe — and we’ll reassess as momentum develops.",
       },
     ],
   },
@@ -76,6 +78,36 @@ window.SiteContent = {
     verificationTitle: "Verification submissions",
     verificationCopy:
       "Artist Cafe may submit eligible artist profiles for platform verification when requirements are met.\n\nSubmission does not guarantee verification and approval is determined solely by each platform.\n\nWe only submit accounts when there is a reasonable likelihood of approval.",
+  },
+  phygital: {
+    headline: "Phygital + immersive marketing with insights",
+    sentence:
+      "Productized immersive experiences that convert attention into measurable clicks, saves, and contact actions — with standardized reporting you can act on.",
+    skus: [
+      {
+        id: "arDrop",
+        name: "AR Banner / AR Drop (WebAR activation)",
+        copy:
+          "A shareable WebAR activation for releases, events, and campaigns.\n\n- Inputs: artwork, logo, 3–5 links, audio preview (optional 3D asset)\n- Output: hosted AR experience + share link + QR + analytics tracking\n- Best for: launch moments + live activations",
+      },
+      {
+        id: "immersiveEpk",
+        name: "Immersive EPK (3D EPK)",
+        copy:
+          "A 3D press + music experience that connects story, content, and conversion.\n\n- Inputs: brand kit, bio, images/video, links, press quotes, booking contact\n- Output: hosted 3D EPK URL + QR/NFC ready + press downloads + analytics\n- Best for: PR outreach + booking + partner conversations",
+      },
+      {
+        id: "linkHub",
+        name: "Phygital Link Hub (smart destination)",
+        copy:
+          "A mobile-first canonical destination for QR/NFC/AR entry points.\n\n- Inputs: link set, embeds, pixels/UTMs\n- Output: canonical link + analytics + UTM/pixel support\n- Best for: every campaign needing a clean conversion path",
+      },
+    ],
+    reports: {
+      title: "Insights reporting (standardized)",
+      copy:
+        "Every phygital asset is instrumented with consistent analytics so we can produce clear, repeatable reports.\n\n- Launch Week Report (7-day)\n- Momentum Report (30-day)\n- Campaign Report (per paid push)\n\nEach report ends with what worked, what didn’t, and 3 recommended next actions (including optional paid acceleration when appropriate).",
+    },
   },
   optionalServices: {
     headline: "How we offer promotion",
@@ -90,16 +122,16 @@ window.SiteContent = {
         a: "No. Editorial submissions, pitching, and platform opportunities are discretionary and non-guaranteed. Decisions are made by third-party platforms and editors.",
       },
       {
-        q: "Are statuses paid upgrades?",
-        a: "No. Statuses are not paid upgrades. They reflect where you are in your journey and may change over time as we review activity and release quality.",
+        q: "Is additional support something I can buy?",
+        a: "No. Artist Cafe has one membership. Additional opportunities are earned through readiness and are reviewed on a rolling basis.",
       },
       {
         q: "Why wasn’t my release selected for additional support?",
         a: "We review artists and releases on a rolling basis. Not all projects qualify for additional support at every stage. You’re welcome to continue releasing through Artist Cafe, and we’ll reassess as momentum develops.",
       },
       {
-        q: "Can my status change?",
-        a: "Yes. Artist Cafe statuses are reviewed periodically and may change based on activity, release quality, or strategic focus. This does not affect your ability to release music through the platform.",
+        q: "Can my eligibility for opportunities change over time?",
+        a: "Yes. We reassess periodically based on release quality, activity, and operational reliability. This does not affect your ability to release through Artist Cafe.",
       },
       {
         q: "Do you submit verification requests?",
@@ -127,6 +159,7 @@ window.SiteContent = {
       { label: "Membership", href: "#membership" },
       { label: "How support works", href: "#support" },
       { label: "Important notes", href: "#disclaimers" },
+      { label: "Phygital + insights", href: "#phygital" },
       { label: "Optional services", href: "#optional-services" },
       { label: "FAQ", href: "#faq" },
       { label: "Apply", href: "apply.html" },
@@ -134,9 +167,9 @@ window.SiteContent = {
     ],
     featured: [
       {
-        eyebrow: "Status system",
-        title: "Opener → Headliner → Hitmaker",
-        foot: "Statuses reflect readiness — not payment",
+        eyebrow: "Membership",
+        title: "Access is paid. Support is earned.",
+        foot: "Review-based, discretionary, non-guaranteed",
       },
       {
         eyebrow: "Editorial",
@@ -153,7 +186,7 @@ window.SiteContent = {
   apply: {
     headline: "Apply for membership",
     sentence:
-      "When you join Artist Cafe, you gain access to our distribution platform and become eligible for review by our team.",
+      "Artist Cafe Membership is $99/month or $999/year. Apply first — if approved, we’ll follow up with onboarding and payment.",
     note:
       "Additional opportunities — including editorial submissions and platform verification submissions — are discretionary and non-guaranteed. Placement decisions are made entirely by third-party platforms and editors.",
     steps: [
@@ -273,6 +306,11 @@ window.SiteContent = {
             "Platform opportunities (discretionary, non-guaranteed)",
             "Optional campaign support (team-recommended)",
           ],
+        },
+        billingOption: {
+          id: "billingOption",
+          label: "Preferred billing option",
+          options: ["Monthly ($99/month)", "Annual ($999/year)"],
         },
         goals: {
           id: "goals",

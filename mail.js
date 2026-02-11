@@ -29,7 +29,7 @@ window.MailService = {
   sendApplication: async (payload) => {
     const baseParams = {
       to_email: "artistscafe@hallpassinternational.com",
-      subject: `Artists Cafe Application — ${payload.artistName || "New"}`,
+      subject: `Artist Cafe Application — ${payload.artistName || "New"}`,
       application_json: JSON.stringify(payload, null, 2),
       reply_to: payload.email,
       artist_name: payload.artistName,

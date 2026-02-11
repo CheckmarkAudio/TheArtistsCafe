@@ -1,9 +1,8 @@
-# The Artists Cafe
+# Artist Cafe
 
 ## Replace background media
-- Replace `/assets/bg.mp4` and `/assets/bg.webm` with your optimized videos.
-- Replace `/assets/bg-poster.jpg` with a static poster image.
-- The `<video>` tag in `index.html` and `apply.html` references these files.
+- Update the hero background video URL in `index.html` and `apply.html` (`<source src="...">`).
+- The global page background is a CSS gradient in `styles.css` (no local poster image required).
 
 ## Edit copy
 - All copy lives in `content.js` inside `window.SiteContent`.
@@ -16,10 +15,6 @@
   - `EMAILJS_PUBLIC_KEY`
   - (Optional) `EMAILJS_AUTOREPLY_TEMPLATE_ID`
 - The form submits a JSON payload to `artistscafe@hallpassinternational.com`.
-
-## Tier preselect
-- Tier apply links use a query param: `/apply.html?tier=gold`.
-- `apply.js` reads the `tier` param and preselects the matching radio option.
 
 ## Assets
 - SVG image-link kit lives in `/assets/` and is used for all anchors.

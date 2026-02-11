@@ -2,6 +2,14 @@
   const content = window.SiteContent;
   if (!content) return;
 
+  const getCssVar = (name, fallback) => {
+    const value = window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue(name)
+      .trim();
+    return value || fallback;
+  };
+
   const navLinks = document.getElementById("nav-links");
   const mobileDock = document.getElementById("mobile-dock");
 
@@ -63,6 +71,7 @@
       mediaTypes: [],
       interests: [],
       labelAffiliation: "No",
+      billingOption: "",
     },
     errors: {},
     sending: false,
@@ -71,12 +80,13 @@
 
   const updateStepPills = () => {
     stepPills.innerHTML = "";
+    const focusRing = getCssVar("--focus-ring", "rgba(95, 214, 230, 0.6)");
     content.apply.steps.forEach((step, index) => {
       const pill = document.createElement("div");
       pill.className = "glass-plane step-pill";
       pill.textContent = `${index + 1}. ${step.title}`;
       if (index === state.stepIndex) {
-        pill.style.borderColor = "rgba(92, 150, 176, 0.6)";
+        pill.style.borderColor = focusRing;
       }
       stepPills.appendChild(pill);
     });
@@ -300,6 +310,7 @@
       if (state.values.labelAffiliation === "Yes" && !state.values.labelName) {
         errors.labelName = "Required";
       }
+      if (!state.values.billingOption) errors.billingOption = "Required";
     }
     state.errors = { ...state.errors, ...errors };
     return Object.keys(errors).length === 0;
@@ -421,6 +432,15 @@
           options: step.interests.options,
         })
       );
+      if (step.billingOption) {
+        formPlane.appendChild(
+          createRadioGroup({
+            id: step.billingOption.id,
+            label: step.billingOption.label,
+            options: step.billingOption.options,
+          })
+        );
+      }
       formPlane.appendChild(
         createTextarea({
           id: step.goals.id,
@@ -593,6 +613,7 @@
     const ctx = canvas.getContext("2d");
     const particles = [];
     const stateCanvas = { width: 0, height: 0, pointerX: 0, pointerY: 0 };
+    const particleColor = getCssVar("--particle-color", "rgba(95, 214, 230, 0.32)");
 
     const resize = () => {
       const { innerWidth, innerHeight } = window;
@@ -615,7 +636,7 @@
 
     const draw = () => {
       ctx.clearRect(0, 0, stateCanvas.width, stateCanvas.height);
-      ctx.fillStyle = "rgba(92, 150, 176, 0.3)";
+      ctx.fillStyle = particleColor;
       particles.forEach((p) => {
         const dx = (stateCanvas.pointerX - p.x) * 0.0008;
         const dy = (stateCanvas.pointerY - p.y) * 0.0008;
