@@ -47,6 +47,10 @@ img {
   max-width: 100%;
 }
 
+#hero-subhead {
+  white-space: pre-line;
+}
+
 a {
   text-decoration: none;
 }
@@ -97,6 +101,86 @@ main {
 
 .section {
   padding: 96px 0;
+}
+
+.membership-card,
+.support-intro,
+.optional-services-card {
+  padding: 28px;
+}
+
+.membership-all-title {
+  margin: 0 0 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(245, 249, 255, 0.72);
+}
+
+.membership-bullets,
+.support-bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(245, 249, 255, 0.86);
+  line-height: 1.7;
+}
+
+.membership-bullets li,
+.support-bullets li {
+  margin: 8px 0;
+}
+
+.status-grid,
+.disclaimer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.status-card,
+.disclaimer-card {
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(10, 16, 22, 0.55);
+}
+
+.disclaimer-card {
+  border-color: rgba(120, 199, 220, 0.28);
+  box-shadow: 0 18px 40px rgba(6, 12, 18, 0.5);
+}
+
+.status-card h3,
+.disclaimer-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+.status-copy p,
+.disclaimer-copy p,
+.optional-services-card p {
+  margin: 0 0 12px;
+  color: rgba(245, 249, 255, 0.82);
+  line-height: 1.75;
+  white-space: pre-line;
+}
+
+.status-copy ul,
+.disclaimer-copy ul,
+.optional-services-card ul {
+  margin: 0 0 12px;
+  padding-left: 18px;
+  color: rgba(245, 249, 255, 0.82);
+  line-height: 1.75;
+}
+
+.status-copy li,
+.disclaimer-copy li,
+.optional-services-card li {
+  margin: 6px 0;
 }
 
 .affiliates-section {

@@ -5,18 +5,6 @@
   const navLinks = document.getElementById("nav-links");
   const mobileDock = document.getElementById("mobile-dock");
 
-  const buildImageLink = (href, src, label, className = "img-link") => {
-    const link = document.createElement("a");
-    link.href = href;
-    link.className = className;
-    link.setAttribute("aria-label", label);
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = label;
-    link.appendChild(img);
-    return link;
-  };
-
   const buildTextLink = (href, label, className = "cta-button") => {
     const link = document.createElement("a");
     link.href = href;
@@ -24,6 +12,29 @@
     link.textContent = label;
     link.setAttribute("aria-label", label);
     return link;
+  };
+
+  const renderCopy = (container, text) => {
+    if (!container) return;
+    container.innerHTML = "";
+    const blocks = String(text || "").split(/\n{2,}/g);
+    blocks.forEach((block) => {
+      const lines = block.split("\n").map((line) => line.trim()).filter(Boolean);
+      const bulletLines = lines.filter((line) => line.startsWith("- "));
+      if (bulletLines.length === lines.length && bulletLines.length) {
+        const ul = document.createElement("ul");
+        bulletLines.forEach((line) => {
+          const li = document.createElement("li");
+          li.textContent = line.replace(/^- /, "");
+          ul.appendChild(li);
+        });
+        container.appendChild(ul);
+        return;
+      }
+      const p = document.createElement("p");
+      p.textContent = lines.join("\n");
+      container.appendChild(p);
+    });
   };
 
   content.nav.forEach((item) => {
@@ -48,7 +59,7 @@
 
   const heroHeadline = document.getElementById("hero-headline");
   if (heroHeadline) {
-    const highlightText = "Global distribution";
+    const highlightText = "open label";
     if (content.hero.headline.includes(highlightText)) {
       heroHeadline.innerHTML = content.hero.headline.replace(
         highlightText,
@@ -58,189 +69,110 @@
       heroHeadline.textContent = content.hero.headline;
     }
   }
-  document.getElementById("hero-subhead").textContent = content.hero.subhead;
+  const heroSubhead = document.getElementById("hero-subhead");
+  if (heroSubhead) heroSubhead.textContent = content.hero.subhead;
   const heroCtas = document.getElementById("hero-ctas");
-  content.hero.ctas.forEach((cta) => {
-    const className =
-      cta.label === "Apply" ? "cta-button is-primary" : "cta-button";
-    heroCtas.appendChild(buildTextLink(cta.href, cta.label, className));
-  });
-
-  const affiliateMarquee = document.getElementById("affiliate-marquee");
-  if (affiliateMarquee && content.affiliates?.items?.length) {
-    const scroller = document.createElement("div");
-    scroller.className = "affiliate-scroller";
-    const buildTrack = () => {
-      const track = document.createElement("div");
-      track.className = "affiliate-track";
-      content.affiliates.items.forEach((item) => {
-        if (!item.logo) return;
-        const card = document.createElement("div");
-        card.className = "affiliate-item has-logo";
-        const logo = document.createElement("img");
-        logo.className = "affiliate-logo";
-        logo.src = item.logo;
-        logo.alt = `${item.name} logo`;
-        logo.loading = "lazy";
-        card.appendChild(logo);
-        track.appendChild(card);
-      });
-      return track;
-    };
-    scroller.appendChild(buildTrack());
-    scroller.appendChild(buildTrack());
-    affiliateMarquee.appendChild(scroller);
+  if (heroCtas && content.hero?.ctas?.length) {
+    content.hero.ctas.forEach((cta, index) => {
+      const className =
+        index === 0 ? "cta-button is-primary" : "cta-button";
+      heroCtas.appendChild(buildTextLink(cta.href, cta.label, className));
+    });
   }
 
-  document.getElementById("proof-title").textContent = content.proofStripTitle;
-  document.getElementById("proof-subtitle").textContent = content.proofStripSentence;
-  const proofStrip = document.getElementById("proof-strip");
-  content.proofStrip.forEach((item) => {
-    const outer = document.createElement("div");
-    outer.className = "float-plane";
-    outer.setAttribute("data-parallax", "");
-    const card = document.createElement("div");
-    card.className = "plane-inner open-plane proof-card reveal";
-    card.textContent = item;
-    outer.appendChild(card);
-    proofStrip.appendChild(outer);
-  });
+  const membershipTitle = document.getElementById("membership-title");
+  const membershipSubtitle = document.getElementById("membership-subtitle");
+  const membershipAllTitle = document.getElementById("membership-all-title");
+  const membershipBullets = document.getElementById("membership-bullets");
+  const membershipSupportNote = document.getElementById("membership-support-note");
 
-  const featureGrid = document.getElementById("feature-grid");
-  content.features.items.forEach((feature) => {
-    const outer = document.createElement("div");
-    outer.className = "float-plane";
-    outer.setAttribute("data-parallax", "");
-    const card = document.createElement("div");
-    card.className = "plane-inner open-plane feature-card reveal";
-    const title = document.createElement("h3");
-    title.textContent = feature.title;
-    const list = document.createElement("ul");
-    feature.bullets.forEach((bullet) => {
+  if (membershipTitle) membershipTitle.textContent = content.membership?.headline || "";
+  if (membershipSubtitle) membershipSubtitle.textContent = content.membership?.sentence || "";
+  if (membershipAllTitle) membershipAllTitle.textContent = content.membership?.allMembersTitle || "";
+  if (membershipBullets) {
+    membershipBullets.innerHTML = "";
+    (content.membership?.bullets || []).forEach((bullet) => {
       const li = document.createElement("li");
       li.textContent = bullet;
-      list.appendChild(li);
+      membershipBullets.appendChild(li);
     });
-    card.appendChild(title);
-    card.appendChild(list);
-    outer.appendChild(card);
-    featureGrid.appendChild(outer);
-  });
+  }
+  if (membershipSupportNote) membershipSupportNote.textContent = content.membership?.supportNote || "";
 
-  const immersiveSpotlight = document.getElementById("immersive-spotlight");
-  const immersiveOuter = document.createElement("div");
-  immersiveOuter.className = "float-plane";
-  immersiveOuter.setAttribute("data-parallax", "");
-  const immersiveCard = document.createElement("div");
-  immersiveCard.className = "plane-inner open-plane spotlight-card reveal";
-  immersiveCard.innerHTML = `
-    <h3>${content.immersive.headline}</h3>
-    <p>${content.immersive.sentence}</p>
-    <p><strong>${content.immersive.scanLine}</strong></p>
-  `;
-  const immersiveList = document.createElement("ul");
-  content.immersive.bullets.forEach((bullet) => {
-    const li = document.createElement("li");
-    li.textContent = bullet;
-    immersiveList.appendChild(li);
-  });
-  immersiveCard.appendChild(immersiveList);
-  immersiveOuter.appendChild(immersiveCard);
-  immersiveSpotlight.appendChild(immersiveOuter);
+  const supportTitle = document.getElementById("support-title");
+  const supportSubtitle = document.getElementById("support-subtitle");
+  const supportBullets = document.getElementById("support-bullets");
+  const statusGrid = document.getElementById("status-grid");
 
-  const playlistSpotlight = document.getElementById("playlisting-spotlight");
-  const playlistOuter = document.createElement("div");
-  playlistOuter.className = "float-plane";
-  playlistOuter.setAttribute("data-parallax", "");
-  const playlistCard = document.createElement("div");
-  playlistCard.className = "plane-inner open-plane spotlight-card reveal";
-  const playlistTitle = document.createElement("h3");
-  playlistTitle.textContent = content.playlisting.headline;
-  const playlistList = document.createElement("ul");
-  content.playlisting.bullets.forEach((bullet) => {
-    const li = document.createElement("li");
-    li.textContent = bullet;
-    playlistList.appendChild(li);
-  });
-  const honesty = document.createElement("p");
-  honesty.textContent = content.playlisting.honesty;
-  playlistCard.appendChild(playlistTitle);
-  playlistCard.appendChild(playlistList);
-  playlistCard.appendChild(honesty);
-  playlistOuter.appendChild(playlistCard);
-  playlistSpotlight.appendChild(playlistOuter);
-
-  document.getElementById("tiers-title").textContent = content.tiers.headline;
-  document.getElementById("tiers-subtitle").textContent = content.tiers.sentence;
-  const tierGrid = document.getElementById("tier-grid");
-  content.tiers.cards.forEach((tier) => {
-    const outer = document.createElement("div");
-    outer.className = "float-plane";
-    outer.setAttribute("data-parallax", "");
-    const card = document.createElement("div");
-    card.className = "plane-inner glass-plane tier-card reveal";
-    if (tier.recommended) {
-      card.classList.add("is-recommended");
-      const badge = document.createElement("span");
-      badge.className = "tier-badge";
-      badge.textContent = "Recommended";
-      card.appendChild(badge);
-    }
-    const header = document.createElement("div");
-    header.className = "tier-header";
-    const title = document.createElement("h3");
-    title.textContent = tier.name;
-    const tagline = document.createElement("p");
-    tagline.className = "tier-tagline";
-    tagline.textContent = tier.tagline || "";
-    header.appendChild(title);
-    header.appendChild(tagline);
-    const price = document.createElement("div");
-    price.className = "tier-price";
-    if (tier.priceAmount) {
-      const amount = document.createElement("span");
-      amount.className = "tier-price-amount";
-      amount.textContent = tier.priceAmount;
-      const period = document.createElement("span");
-      period.className = "tier-price-period";
-      period.textContent = tier.pricePeriod || "";
-      price.appendChild(amount);
-      price.appendChild(period);
-    } else {
-      const priceText = document.createElement("span");
-      priceText.className = "tier-price-text";
-      priceText.textContent = tier.price || "";
-      price.appendChild(priceText);
-    }
-    const cta = document.createElement("a");
-    cta.className = "tier-select";
-    cta.href = `apply.html?tier=${tier.id}`;
-    cta.textContent = tier.ctaLabel || "Select";
-    const list = document.createElement("ul");
-    list.className = "tier-features";
-    tier.bullets.forEach((bullet) => {
+  if (supportTitle) supportTitle.textContent = content.support?.headline || "";
+  if (supportSubtitle) supportSubtitle.textContent = content.support?.sentence || "";
+  if (supportBullets) {
+    supportBullets.innerHTML = "";
+    (content.support?.bullets || []).forEach((bullet) => {
       const li = document.createElement("li");
       li.textContent = bullet;
-      list.appendChild(li);
+      supportBullets.appendChild(li);
     });
-    card.appendChild(header);
-    card.appendChild(price);
-    card.appendChild(cta);
-    card.appendChild(list);
-    if (tier.note) {
-      const note = document.createElement("div");
-      note.className = "tier-note";
-      note.textContent = tier.note;
-      card.appendChild(note);
-    }
-    outer.appendChild(card);
-    tierGrid.appendChild(outer);
-  });
+  }
+  if (statusGrid) {
+    statusGrid.innerHTML = "";
+    (content.support?.statuses || []).forEach((status) => {
+      const outer = document.createElement("div");
+      outer.className = "float-plane";
+      outer.setAttribute("data-parallax", "");
+      const card = document.createElement("div");
+      card.className = "plane-inner open-plane status-card reveal";
+      const title = document.createElement("h3");
+      title.textContent = status.name;
+      const body = document.createElement("div");
+      body.className = "status-copy";
+      renderCopy(body, status.copy);
+      card.appendChild(title);
+      card.appendChild(body);
+      outer.appendChild(card);
+      statusGrid.appendChild(outer);
+    });
+  }
 
-  document.getElementById("movement-title").textContent = content.movement.headline;
-  document.getElementById("movement-line").textContent = content.brand.movementLine;
-  document.getElementById("movement-quote").textContent = content.brand.quote;
-  document.getElementById("movement-coowner").textContent = content.brand.coOwnerLine;
+  const disclaimersTitle = document.getElementById("disclaimers-title");
+  if (disclaimersTitle) disclaimersTitle.textContent = content.disclaimers?.headline || "";
+  const disclaimerGrid = document.getElementById("disclaimer-grid");
+  if (disclaimerGrid) {
+    disclaimerGrid.innerHTML = "";
+    const items = [
+      {
+        title: content.disclaimers?.editorialTitle,
+        copy: content.disclaimers?.editorialCopy,
+      },
+      {
+        title: content.disclaimers?.verificationTitle,
+        copy: content.disclaimers?.verificationCopy,
+      },
+    ].filter((item) => item.title && item.copy);
+    items.forEach((item) => {
+      const outer = document.createElement("div");
+      outer.className = "float-plane";
+      outer.setAttribute("data-parallax", "");
+      const card = document.createElement("div");
+      card.className = "plane-inner open-plane disclaimer-card reveal";
+      const title = document.createElement("h3");
+      title.textContent = item.title;
+      const body = document.createElement("div");
+      body.className = "disclaimer-copy";
+      renderCopy(body, item.copy);
+      card.appendChild(title);
+      card.appendChild(body);
+      outer.appendChild(card);
+      disclaimerGrid.appendChild(outer);
+    });
+  }
+
+  const optionalServicesTitle = document.getElementById("optional-services-title");
+  if (optionalServicesTitle) {
+    optionalServicesTitle.textContent = content.optionalServices?.headline || "";
+  }
+  const optionalServicesCopy = document.getElementById("optional-services-copy");
+  if (optionalServicesCopy) renderCopy(optionalServicesCopy, content.optionalServices?.copy || "");
 
   document.getElementById("faq-title").textContent = content.faq.headline;
   const faqGrid = document.getElementById("faq-grid");

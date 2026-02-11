@@ -1,328 +1,161 @@
 window.SiteContent = {
   brand: {
-    name: "The Artists Cafe",
+    name: "Artist Cafe",
     email: "artistscafe@hallpassinternational.com",
-    movementLine: "Join the digital immersive lifestyle movement.",
-    coOwnerLine:
-      "Co-owned and managed by Hip-Hop Lxrd Melchior, Chairman/Co-Founder of HallPass International.",
-    quote: "\"Artists deserve global reach without giving up their royalties.\" — Lxrd Melchior",
   },
   accessibility: {
     homeLabel: "Home",
     applyNowLabel: "Apply now",
   },
   nav: [
-    { id: "tiers", label: "Tiers", href: "#tiers" },
-    { id: "features", label: "Features", href: "#features" },
+    { id: "membership", label: "Membership", href: "#membership" },
+    { id: "support", label: "Support", href: "#support" },
+    { id: "disclaimers", label: "Disclaimers", href: "#disclaimers" },
+    { id: "optional-services", label: "Optional services", href: "#optional-services" },
     { id: "faq", label: "FAQ", href: "#faq" },
     { id: "apply", label: "Apply", href: "apply.html" },
   ],
   hero: {
-    headline:
-      "Global distribution + immersive promotion + keep 100% royalties.",
+    headline: "Artist Cafe is an open label for independent artists.",
     subhead:
-      "Target audiences all over the world with official profiles, playlist submissions, and scan-to-play campaigns.",
+      "We provide professional distribution, infrastructure, and access to opportunities — and we actively support artists who demonstrate readiness, momentum, and consistency.\n\nNot every artist is pushed.\nNot every release qualifies.\nSupport is earned, not purchased.",
     ctas: [
-      { label: "Apply", href: "apply.html" },
-      { label: "View Tiers", href: "#tiers" },
+      { label: "Apply for membership", href: "apply.html" },
+      { label: "How support works", href: "#support" },
     ],
   },
-  affiliates: {
-    items: [
-      {
-        name: "HallPass International",
-        type: "Affiliate",
-      },
-      {
-        name: "Checkmark Audio",
-        type: "Affiliate",
-        logo:
-          "https://static.wixstatic.com/media/afbb39_ad46dbc0ab0f434ab7b01e85f36e5c50~mv2.webp",
-      },
-      {
-        name: "UMG",
-        type: "Associated",
-      },
-      {
-        name: "Spotify",
-        type: "Platform",
-        logo:
-          "https://static.wixstatic.com/media/afbb39_b36a596106bc4cec980d0c2f70b63821~mv2.webp",
-      },
-      {
-        name: "Apple Music",
-        type: "Platform",
-        logo:
-          "https://static.wixstatic.com/media/afbb39_8c4030637d98421db009f72dc11e8002~mv2.png",
-      },
-      {
-        name: "YouTube",
-        type: "Platform",
-        logo:
-          "https://static.wixstatic.com/media/afbb39_c2f7d5db241548619b34a09959132277~mv2.png",
-      },
-      {
-        name: "VEVO",
-        type: "Platform",
-        logo:
-          "https://static.wixstatic.com/media/afbb39_74ce8456b6f4457b883ba3a57cb66423~mv2.png",
-      },
-      {
-        name: "TikTok",
-        type: "Platform",
-        logo:
-          "https://static.wixstatic.com/media/afbb39_1c2e9e0060bf487a81f3896b06384771~mv2.png",
-      },
-      {
-        name: "SoundCloud",
-        type: "Platform",
-        logo:
-          "https://static.wixstatic.com/media/afbb39_3f70c2fbfc564427996b3068816f4afa~mv2.png",
-      },
-      {
-        name: "Bandcamp",
-        type: "Platform",
-        logo:
-          "https://static.wixstatic.com/media/afbb39_50c94f758ce9431d9ad4cc0d5b2cf4a5~mv2.png",
-      },
-      {
-        name: "Amazon Music",
-        type: "Platform",
-        logo:
-          "https://static.wixstatic.com/media/afbb39_21da5456eaab4e2f9ba740907d838215~mv2.png",
-      },
-      {
-        name: "Pandora",
-        type: "Platform",
-        logo:
-          "https://static.wixstatic.com/media/afbb39_64f945b5b7114727a7602f08960e6bb7~mv2.png",
-      },
-      {
-        name: "Deezer",
-        type: "Platform",
-        logo:
-          "https://static.wixstatic.com/media/afbb39_a2c267f8663b4dbebaed7af01f4fa3b2~mv2.png",
-      },
-    ],
-  },
-  proofStrip: [
-    "300+ worldwide outlets",
-    "Official profiles: TikTok / VEVO / YouTube",
-    "Artist ID matching",
-    "Audio + Videos + Ringtones",
-    "6-week playlisting push",
-    "Keep 100% royalties",
-  ],
-  proofStripTitle: "Proof at a glance + what you get",
-  proofStripSentence: "Fast credibility points and the core benefits in one view.",
-  howItWorks: {
-    headline: "How it works",
-    sentence: "Fast verification, clear options, immediate momentum.",
-    steps: [
-      "Apply (verification)",
-      "Get verified",
-      "Choose a tier (Free / Gold / Platinum / Diamond)",
-      "Distribute + Immersive campaigns + Playlisting + Insights",
-    ],
-  },
-  features: {
-    headline: "What you get",
-    sentence: "Everything you need to grow, distribute, and engage fans.",
-    items: [
-      {
-        title: "Distribution",
-        bullets: [
-          "300+ sources",
-          "Worldwide audiences",
-          "Month-to-month, no hidden fees",
-        ],
-      },
-      {
-        title: "Platform Presence",
-        bullets: [
-          "Official profiles",
-          "TikTok / VEVO / YouTube",
-          "Artist ID matching",
-        ],
-      },
-      {
-        title: "Media Types",
-        bullets: ["Audio", "Music videos", "Ringtones"],
-      },
-      {
-        title: "Immersive",
-        bullets: [
-          "AR / MR / 3D campaigns",
-          "10 immersive styles",
-          "Scan → Play → Engage",
-        ],
-      },
-      {
-        title: "Analytics",
-        bullets: ["Brand loyalty", "Engagement insights", "Fan retention"],
-      },
-      {
-        title: "Business",
-        bullets: [
-          "Keep 100% royalties",
-          "Sales statements",
-          "Artist management tools",
-        ],
-      },
-      {
-        title: "Support",
-        bullets: [
-          "Account manager",
-          "Free consultation",
-          "Artist development",
-        ],
-      },
-      {
-        title: "Add-ons",
-        bullets: [
-          "Membership store",
-          "Landing page option",
-          "Omnichannel + polls + CTAs + ticket links",
-        ],
-      },
-    ],
-  },
-  immersive: {
-    headline: "Immersive spotlight",
-    sentence: "Tour-feel campaigns that turn real-world moments into streams.",
-    scanLine: "Scan → Play → Engage → Measure",
+  membership: {
+    headline: "What membership means",
+    sentence:
+      "When you join Artist Cafe, you gain access to our distribution platform and become eligible for review by our team.",
+    allMembersTitle: "All members can:",
     bullets: [
-      "Scan your image or physical object",
-      "Music plays and engagement starts",
-      "Streaming + interaction data flows in",
+      "Release music professionally",
+      "Distribute audio and video (including VEVO)",
+      "Collect and track royalties",
+      "Maintain full control of their catalog",
     ],
+    supportNote:
+      "Additional support — including editorial submissions, platform verification, and promotional consideration — is offered selectively based on artist readiness and release quality.",
   },
-  playlisting: {
-    headline: "Playlisting spotlight (6 weeks)",
+  support: {
+    headline: "How Artist Cafe support works",
+    sentence:
+      "Artist Cafe uses a status system to determine which artists and releases are eligible for additional opportunities.",
     bullets: [
-      "We submit releases to playlists",
-      "Sustained 6-week outreach push",
-      "We report activity and responses",
+      "Statuses are not paid upgrades.",
+      "They reflect where you are in your journey.",
+      "Statuses may change over time and are reviewed regularly.",
     ],
-    honesty: "No guaranteed placements.",
-  },
-  tiers: {
-    headline: "Membership tiers",
-    sentence: "Scale as you grow. Upgrade anytime.",
-    cards: [
+    statuses: [
       {
-        id: "free",
-        name: "Free",
-        tagline: "Get started",
-        price: "Contact for pricing",
-        ctaLabel: "Select",
-        bullets: [
-          "Verification + onboarding",
-          "Distribution access",
-          "Basic insights",
-          "Apply for add-ons",
-        ],
+        id: "opener",
+        name: "Opener",
+        copy:
+          "You’re officially part of Artist Cafe.\n\nYour releases are live, professionally distributed, and eligible for review. At this stage, our focus is ensuring smooth delivery, clean metadata, and a strong foundation for future releases.\n\nAs you continue releasing and building momentum, your work may be reviewed for additional opportunities.",
       },
       {
-        id: "gold",
-        name: "Gold",
-        tagline: "Grow your brand",
-        price: "Contact for pricing",
-        ctaLabel: "Select",
-        recommended: true,
-        bullets: [
-          "Official profiles setup",
-          "Artist ID matching",
-          "Playlisting submission",
-          "Sales statements",
-          "Support guidance",
-        ],
+        id: "headliner",
+        name: "Headliner",
+        copy:
+          "You’ve been flagged as a Headliner artist.\n\nThis means your releases demonstrate professional readiness and may be considered for select platform opportunities, including:\n\n- Editorial playlist submission consideration\n- Platform verification submissions (where applicable)\n- Priority review for Artist Cafe features and highlights\n\nSubmission does not guarantee placement or approval, and all opportunities are subject to platform discretion.\n\nContinue releasing consistently and building momentum — status is reviewed on an ongoing basis.",
       },
       {
-        id: "platinum",
-        name: "Platinum",
-        tagline: "Engage your audience",
-        price: "Contact for pricing",
-        ctaLabel: "Select",
-        bullets: [
-          "Immersive campaigns",
-          "Engagement insights",
-          "6-week playlisting push",
-          "Account manager",
-          "Priority support",
-        ],
-      },
-      {
-        id: "diamond",
-        name: "Diamond",
-        tagline: "Scale your business",
-        price: "Contact for pricing",
-        ctaLabel: "Select",
-        bullets: [
-          "Full immersive suite (10 styles)",
-          "Omnichannel marketing",
-          "Landing pages + CTAs",
-          "Custom campaign strategy",
-          "Dedicated support",
-        ],
+        id: "hitmaker",
+        name: "Hitmaker",
+        copy:
+          "Your project has been selected for active support.\n\nHitmaker status is invite-only and applies to releases that demonstrate strong momentum, strategic fit, and readiness for wider exposure.\n\nThis may include:\n\n- Priority editorial playlist submissions\n- VEVO video pitching and promotional consideration\n- Territory-specific opportunities when appropriate\n\nNot all releases qualify, and Hitmaker support is reviewed per project.",
       },
     ],
   },
-  movement: {
-    headline: "Movement",
-    sentence: "Digital immersive lifestyle, built for artists.",
+  disclaimers: {
+    headline: "Important notes",
+    editorialTitle: "Editorial & pitching disclaimer",
+    editorialCopy:
+      "Editorial submissions and platform pitching are discretionary and non-guaranteed.\nPlacement decisions are made entirely by third-party platforms and editors.",
+    verificationTitle: "Verification submissions",
+    verificationCopy:
+      "Artist Cafe may submit eligible artist profiles for platform verification when requirements are met.\n\nSubmission does not guarantee verification and approval is determined solely by each platform.\n\nWe only submit accounts when there is a reasonable likelihood of approval.",
+  },
+  optionalServices: {
+    headline: "How we offer promotion",
+    copy:
+      "Artist Cafe does not sell promotion as a menu of guarantees.\n\nInstead, we recommend optional paid services — such as PR, advertising, or campaign support — when they align with your goals and readiness.\n\nIf we believe a paid service could meaningfully support your release, our team will let you know.",
   },
   faq: {
     headline: "FAQ",
     items: [
       {
-        q: "Do you take a percentage of royalties?",
-        a: "No. Artists keep 100% royalties.",
+        q: "Is additional support guaranteed?",
+        a: "No. Editorial submissions, pitching, and platform opportunities are discretionary and non-guaranteed. Decisions are made by third-party platforms and editors.",
       },
       {
-        q: "Are there contracts or hidden fees?",
-        a: "Month-to-month, transparent, no hidden fees.",
+        q: "Are statuses paid upgrades?",
+        a: "No. Statuses are not paid upgrades. They reflect where you are in your journey and may change over time as we review activity and release quality.",
       },
       {
-        q: "What is verification?",
-        a: "We verify real artists before onboarding services.",
+        q: "Why wasn’t my release selected for additional support?",
+        a: "We review artists and releases on a rolling basis. Not all projects qualify for additional support at every stage. You’re welcome to continue releasing through Artist Cafe, and we’ll reassess as momentum develops.",
       },
       {
-        q: "What is artist ID matching?",
-        a: "We match social profiles to the correct official content.",
+        q: "Can my status change?",
+        a: "Yes. Artist Cafe statuses are reviewed periodically and may change based on activity, release quality, or strategic focus. This does not affect your ability to release music through the platform.",
       },
       {
-        q: "What are immersive campaigns?",
-        a: "AR/MR/3D experiences that feel like you are on tour.",
+        q: "Do you submit verification requests?",
+        a: "Artist Cafe may submit eligible artist profiles for platform verification when requirements are met. Submission does not guarantee verification and approval is determined solely by each platform.",
       },
       {
-        q: "What does playlisting include?",
-        a: "Submission, a 6-week push, and reporting. No guarantees.",
-      },
-      {
-        q: "What can I distribute?",
-        a: "Audio, music videos, and ringtones.",
-      },
-      {
-        q: "How do official profiles work?",
-        a: "We set up official profiles on TikTok, VEVO, and YouTube.",
-      },
-      {
-        q: "How global is the distribution?",
-        a: "300+ worldwide outlets targeting audiences all over the world.",
+        q: "Do you sell promotion packages?",
+        a: "Artist Cafe does not sell promotion as a menu of guarantees. We recommend optional paid services when they align with your goals and readiness.",
       },
     ],
   },
   finalCta: {
-    headline: "Ready to apply?",
-    sentence: "Get verified and choose your tier.",
-    applyLabel: "Apply",
+    headline: "Artist Cafe is built to support artists who show up, execute, and grow.",
+    sentence:
+      "We’re here for the long game — and we invest our attention where it makes sense.",
+    applyLabel: "Apply for membership",
     emailLabel: "Email",
+  },
+  sidebar: {
+    label: "Artist Cafe",
+    title: "Navigate",
+    featuredLabel: "Featured",
+    links: [
+      { label: "Home", href: "#top" },
+      { label: "Membership", href: "#membership" },
+      { label: "How support works", href: "#support" },
+      { label: "Important notes", href: "#disclaimers" },
+      { label: "Optional services", href: "#optional-services" },
+      { label: "FAQ", href: "#faq" },
+      { label: "Apply", href: "apply.html" },
+      { label: "Email us", href: "mailto:artistscafe@hallpassinternational.com" },
+    ],
+    featured: [
+      {
+        eyebrow: "Status system",
+        title: "Opener → Headliner → Hitmaker",
+        foot: "Statuses reflect readiness — not payment",
+      },
+      {
+        eyebrow: "Editorial",
+        title: "Pitching is discretionary",
+        foot: "No guaranteed placements",
+      },
+      {
+        eyebrow: "Verification",
+        title: "Submission is not a guarantee",
+        foot: "Approval is platform-decided",
+      },
+    ],
   },
   apply: {
     headline: "Apply for membership",
-    sentence: "Verification first. Services follow once approved.",
-    note: "KYC may be requested privately after verification. Do not upload sensitive documents here.",
+    sentence:
+      "When you join Artist Cafe, you gain access to our distribution platform and become eligible for review by our team.",
+    note:
+      "Additional opportunities — including editorial submissions and platform verification submissions — are discretionary and non-guaranteed. Placement decisions are made entirely by third-party platforms and editors.",
     steps: [
       {
         id: "identity",
@@ -360,7 +193,7 @@ window.SiteContent = {
         fields: [
           {
             id: "spotify",
-            label: "Spotify artist link",
+            label: "Spotify artist link (optional)",
             type: "url",
             required: false,
           },
@@ -411,7 +244,7 @@ window.SiteContent = {
       },
       {
         id: "rights",
-        title: "Rights + goals + tier",
+        title: "Rights + goals",
         rights: {
           id: "rightsCheck",
           label: "I own/control rights to distribute.",
@@ -428,27 +261,26 @@ window.SiteContent = {
         mediaTypes: {
           id: "mediaTypes",
           label: "What are you distributing?",
-          options: ["Audio", "Video", "Ringtone"],
+          options: ["Audio", "Video"],
         },
-        services: {
-          id: "services",
-          label: "Services you want",
+        interests: {
+          id: "interests",
+          label: "What are you looking for?",
           options: [
-            "Official profiles",
-            "Artist ID matching",
-            "Immersive campaigns",
-            "6-week playlisting",
-            "Distribution only",
+            "Professional distribution + infrastructure",
+            "Audio + video distribution (including VEVO)",
+            "Royalty collection + tracking",
+            "Platform opportunities (discretionary, non-guaranteed)",
+            "Optional campaign support (team-recommended)",
           ],
         },
-        tier: {
-          id: "tier",
-          label: "Tier selection",
-          options: ["Free", "Gold", "Platinum", "Diamond"],
+        goals: {
+          id: "goals",
+          label: "Goals for your next release (optional)",
         },
         notes: {
           id: "notes",
-          label: "Notes",
+          label: "Notes (optional)",
         },
       },
     ],
@@ -457,14 +289,13 @@ window.SiteContent = {
       back: "Back",
       submit: "Submit application",
       sending: "Sending...",
-      success: "Application received. We will follow up soon.",
+      success: "Application received. Our team will review and follow up.",
       error: "Something went wrong. Please try again.",
       rateLimit: "Please wait a moment before submitting again.",
     },
     nextSteps: [
-      "We review within 3–5 business days.",
-      "A manager reaches out for verification.",
-      "You choose tier and add-ons after approval.",
+      "We review applications on a rolling basis.",
+      "If approved, we’ll follow up with next steps for onboarding and releases.",
     ],
   },
 };

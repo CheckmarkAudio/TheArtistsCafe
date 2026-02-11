@@ -61,22 +61,13 @@
       role: "",
       spotifyNotLive: false,
       mediaTypes: [],
-      services: [],
-      tier: "",
+      interests: [],
       labelAffiliation: "No",
     },
     errors: {},
     sending: false,
     submitted: false,
   };
-
-  const queryTier = new URLSearchParams(window.location.search).get("tier");
-  if (queryTier) {
-    const match = content.apply.steps[2].tier.options.find(
-      (option) => option.toLowerCase() === queryTier.toLowerCase()
-    );
-    if (match) state.values.tier = match;
-  }
 
   const updateStepPills = () => {
     stepPills.innerHTML = "";
@@ -301,16 +292,11 @@
       }
     }
     if (step.id === "presence") {
-      const spotifyRequired = !state.values.spotifyNotLive;
-      if (spotifyRequired && !state.values.spotify) {
-        errors.spotify = "Required or mark not live";
-      }
       if (!state.values.youtube) errors.youtube = "Required";
       if (!state.values.tiktok) errors.tiktok = "Required";
     }
     if (step.id === "rights") {
       if (!state.values.rightsCheck) errors.rightsCheck = "Required";
-      if (!state.values.tier) errors.tier = "Select a tier";
       if (state.values.labelAffiliation === "Yes" && !state.values.labelName) {
         errors.labelName = "Required";
       }
@@ -349,26 +335,6 @@
           value: state.values.role,
         })
       );
-    }
-
-    if (step.id === "identity") {
-      step.fields.forEach((field) => {
-        grid.appendChild(
-          createField({
-            ...field,
-            value: state.values[field.id],
-          })
-        );
-      });
-      grid.appendChild(
-        createSelect({
-          id: "role",
-          label: step.role.label,
-          options: step.role.options,
-          required: true,
-          value: state.values.role,
-        })
-      );
       formPlane.appendChild(grid);
     }
 
@@ -377,7 +343,7 @@
         if (field.id === "spotify") {
           const wrapper = createField({
             ...field,
-            required: !state.values.spotifyNotLive,
+            required: false,
             value: state.values.spotify,
           });
           const input = wrapper.querySelector("input");
@@ -450,16 +416,15 @@
       );
       formPlane.appendChild(
         createCheckboxGroup({
-          id: step.services.id,
-          label: step.services.label,
-          options: step.services.options,
+          id: step.interests.id,
+          label: step.interests.label,
+          options: step.interests.options,
         })
       );
       formPlane.appendChild(
-        createRadioGroup({
-          id: step.tier.id,
-          label: step.tier.label,
-          options: step.tier.options,
+        createTextarea({
+          id: step.goals.id,
+          label: step.goals.label,
         })
       );
       formPlane.appendChild(

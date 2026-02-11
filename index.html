@@ -20,6 +20,13 @@
 
     <nav class="top-nav">
       <div class="container nav-inner">
+        <a class="img-link" href="#top" aria-label="Home">
+          <img
+            class="brand-mark"
+            src="https://static.wixstatic.com/media/afbb39_c393044f52d345399aedd62ef55e0da3~mv2.png"
+            alt="Artist Cafe"
+          />
+        </a>
         <div class="nav-links" id="nav-links"></div>
       </div>
     </nav>
@@ -39,8 +46,8 @@
       <div class="sidebar-panel" id="sidebar-panel" aria-hidden="true">
         <div class="sidebar-panel-header">
           <div>
-            <p class="sidebar-label">UMG</p>
-            <h3>Side panel</h3>
+            <p class="sidebar-label">Artist Cafe</p>
+            <h3>Navigate</h3>
           </div>
           <button
             class="sidebar-close"
@@ -52,15 +59,14 @@
           </button>
         </div>
         <nav class="sidebar-links">
-          <a class="sidebar-link" href="#">Home</a>
-          <a class="sidebar-link" href="#">UMG</a>
-          <a class="sidebar-link" href="#">Our Labels &amp; Brands</a>
-          <a class="sidebar-link" href="#">Global Impact</a>
-          <a class="sidebar-link" href="#">Digital Innovation</a>
-          <a class="sidebar-link" href="#">For UMG Artists</a>
-          <a class="sidebar-link" href="#">Careers at UMG</a>
-          <a class="sidebar-link" href="#">Investor Relations</a>
-          <a class="sidebar-link" href="#">Contact Us</a>
+          <a class="sidebar-link" href="#top">Home</a>
+          <a class="sidebar-link" href="#membership">Membership</a>
+          <a class="sidebar-link" href="#support">How support works</a>
+          <a class="sidebar-link" href="#disclaimers">Important notes</a>
+          <a class="sidebar-link" href="#optional-services">Optional services</a>
+          <a class="sidebar-link" href="#faq">FAQ</a>
+          <a class="sidebar-link" href="apply.html">Apply</a>
+          <a class="sidebar-link" href="mailto:artistscafe@hallpassinternational.com">Email us</a>
         </nav>
 
         <div class="sidebar-ad">
@@ -78,23 +84,23 @@
           <div class="ad-rotator" data-ad-rotator>
             <div class="ad-slide is-active">
               <div class="ad-card">
-                <p class="ad-eyebrow">Forbes</p>
-                <p class="ad-title">America's best midsize employers</p>
-                <p class="ad-foot">2025 · Powered by Statista</p>
+                <p class="ad-eyebrow">Status system</p>
+                <p class="ad-title">Opener → Headliner → Hitmaker</p>
+                <p class="ad-foot">Statuses reflect readiness — not payment</p>
               </div>
             </div>
             <div class="ad-slide">
               <div class="ad-card">
-                <p class="ad-eyebrow">Spotlight</p>
-                <p class="ad-title">Digital innovation showcase</p>
-                <p class="ad-foot">Immersive activations</p>
+                <p class="ad-eyebrow">Editorial</p>
+                <p class="ad-title">Pitching is discretionary</p>
+                <p class="ad-foot">No guaranteed placements</p>
               </div>
             </div>
             <div class="ad-slide">
               <div class="ad-card">
-                <p class="ad-eyebrow">Featured</p>
-                <p class="ad-title">Global impact report</p>
-                <p class="ad-foot">Artists &amp; communities</p>
+                <p class="ad-eyebrow">Verification</p>
+                <p class="ad-title">Submission is not a guarantee</p>
+                <p class="ad-foot">Approval is platform-decided</p>
               </div>
             </div>
           </div>
@@ -138,57 +144,64 @@
         </div>
       </section>
 
-      <section class="section affiliates-section" id="affiliates">
-        <div class="affiliate-marquee reveal" id="affiliate-marquee"></div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="float-plane" data-parallax>
-            <div class="plane-inner open-plane spotlight-card reveal">
-              <h3 id="movement-title"></h3>
-              <p id="movement-line"></p>
-              <p class="footer-note" id="movement-quote"></p>
-              <p class="footer-note" id="movement-coowner"></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="tiers">
+      <section class="section" id="membership">
         <div class="container">
           <div class="float-plane" data-parallax>
             <div class="plane-inner open-plane section-header-inner reveal">
-              <h2 class="section-title" id="tiers-title"></h2>
-              <p class="section-subtitle" id="tiers-subtitle"></p>
+              <h2 class="section-title" id="membership-title"></h2>
+              <p class="section-subtitle" id="membership-subtitle"></p>
             </div>
           </div>
-          <div class="tier-grid" id="tier-grid"></div>
+          <div class="float-plane" data-parallax>
+            <div class="plane-inner open-plane membership-card reveal">
+              <p class="membership-all-title" id="membership-all-title"></p>
+              <ul class="membership-bullets" id="membership-bullets"></ul>
+              <p class="footer-note" id="membership-support-note"></p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="features">
+      <section class="section" id="support">
         <div class="container">
           <div class="float-plane" data-parallax>
             <div class="plane-inner open-plane section-header-inner reveal">
-              <h2 class="section-title" id="proof-title"></h2>
-              <p class="section-subtitle" id="proof-subtitle"></p>
+              <h2 class="section-title" id="support-title"></h2>
+              <p class="section-subtitle" id="support-subtitle"></p>
             </div>
           </div>
-          <div class="proof-strip" id="proof-strip"></div>
-          <div class="feature-grid" id="feature-grid"></div>
+          <div class="float-plane" data-parallax>
+            <div class="plane-inner open-plane support-intro reveal">
+              <ul class="support-bullets" id="support-bullets"></ul>
+            </div>
+          </div>
+          <div class="status-grid" id="status-grid"></div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="disclaimers">
         <div class="container">
-          <div class="spotlight" id="immersive-spotlight"></div>
+          <div class="float-plane" data-parallax>
+            <div class="plane-inner open-plane section-header-inner reveal">
+              <h2 class="section-title" id="disclaimers-title"></h2>
+            </div>
+          </div>
+          <div class="disclaimer-grid" id="disclaimer-grid"></div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="optional-services">
         <div class="container">
-          <div class="spotlight" id="playlisting-spotlight"></div>
+          <div class="float-plane" data-parallax>
+            <div class="plane-inner open-plane section-header-inner reveal">
+              <h2 class="section-title" id="optional-services-title"></h2>
+            </div>
+          </div>
+          <div class="float-plane" data-parallax>
+            <div class="plane-inner open-plane optional-services-card reveal">
+              <div id="optional-services-copy"></div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -222,65 +235,51 @@
         <div class="footer-grid">
           <a
             class="footer-tile"
-            href="#"
-            aria-label="UMG"
-            style="
-              --tile-image: url('https://static.wixstatic.com/media/afbb39_fe5bef6d47cc4be7b278977dede9493c~mv2.jpg');
-            "
+            href="#membership"
+            aria-label="Membership"
           >
-            <span class="footer-tile-title">UMG</span>
-            <span class="footer-tile-sub">about us</span>
+            <span class="footer-tile-title">Membership</span>
+            <span class="footer-tile-sub">what you get</span>
           </a>
           <a
             class="footer-tile"
-            href="#"
-            aria-label="Our Labels &amp; Brands"
-            style="
-              --tile-image: url('https://static.wixstatic.com/media/afbb39_7be98d85b3c94da0b2e0ee9ea5a57561~mv2.jpg');
-            "
+            href="#support"
+            aria-label="How support works"
           >
-            <span class="footer-tile-title">Our Labels &amp; Brands</span>
+            <span class="footer-tile-title">Support</span>
+            <span class="footer-tile-sub">status system</span>
           </a>
           <a
             class="footer-tile"
-            href="#"
-            aria-label="Global Impact"
-            style="
-              --tile-image: url('https://static.wixstatic.com/media/afbb39_6ff21180714b471796eeb0f4a8b2e9af~mv2.jpg');
-            "
+            href="#disclaimers"
+            aria-label="Important notes"
           >
-            <span class="footer-tile-title">Global Impact</span>
+            <span class="footer-tile-title">Disclaimers</span>
+            <span class="footer-tile-sub">non-guarantee notes</span>
           </a>
           <a
             class="footer-tile"
-            href="#"
-            aria-label="For UMG Artists"
-            style="
-              --tile-image: url('https://static.wixstatic.com/media/afbb39_e44b26fcc8b1482aa98856068bb99b0b~mv2.jpg');
-            "
+            href="#optional-services"
+            aria-label="Optional services"
           >
-            <span class="footer-tile-title">For UMG Artists</span>
+            <span class="footer-tile-title">Optional services</span>
+            <span class="footer-tile-sub">team-recommended</span>
           </a>
           <a
             class="footer-tile"
-            href="#"
-            aria-label="Careers"
-            style="
-              --tile-image: url('https://static.wixstatic.com/media/afbb39_35f0be245478438c90b1db8bd98e4d5b~mv2.jpg');
-            "
+            href="#faq"
+            aria-label="FAQ"
           >
-            <span class="footer-tile-title">Careers</span>
+            <span class="footer-tile-title">FAQ</span>
+            <span class="footer-tile-sub">answers + expectations</span>
           </a>
           <a
             class="footer-tile"
-            href="#"
-            aria-label="U-Discover"
-            style="
-              --tile-image: url('https://static.wixstatic.com/media/afbb39_fe5bef6d47cc4be7b278977dede9493c~mv2.jpg');
-            "
+            href="apply.html"
+            aria-label="Apply"
           >
-            <span class="footer-tile-title">U-Discover</span>
-            <span class="footer-tile-sub">explore our music</span>
+            <span class="footer-tile-title">Apply</span>
+            <span class="footer-tile-sub">join Artist Cafe</span>
           </a>
         </div>
 
